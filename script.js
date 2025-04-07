@@ -1,14 +1,14 @@
 /**
- * Point culture (en Français car je suis un peu obligé): 
- * Dans ce genre de jeu, un mot equivaut a 5 caractères, y compris les espaces. 
+ * Point culture (en Français car je suis un peu obligé):
+ * Dans ce genre de jeu, un mot equivaut a 5 caractères, y compris les espaces.
  * La precision, c'est le pourcentage de caractères tapées correctement sur toutes les caractères tapées.
- * 
- * Sur ce... Amusez-vous bien ! 
+ *
+ * Sur ce... Amusez-vous bien !
  */
-let startTime = null, previousEndTime = null;
+let startTime = null,
+    previousEndTime = null;
 let currentWordIndex = 0;
 const wordsToType = [];
-
 const modeSelect = document.getElementById("mode");
 const wordDisplay = document.getElementById("word-display");
 const inputField = document.getElementById("input-field");
@@ -17,7 +17,7 @@ const results = document.getElementById("results");
 const words = {
     easy: ["apple", "banana", "grape", "orange", "cherry"],
     medium: ["keyboard", "monitor", "printer", "charger", "battery"],
-    hard: ["synchronize", "complicated", "development", "extravagant", "misconception"]
+    hard: ["synchronize", "complicated", "development", "extravagant", "misconception"],
 };
 
 // Generate a random word from the selected mode
@@ -57,7 +57,7 @@ const startTimer = () => {
 // Calculate and return WPM & accuracy
 const getCurrentStats = () => {
     const elapsedTime = (Date.now() - previousEndTime) / 1000; // Seconds
-    const wpm = (wordsToType[currentWordIndex].length / 5) / (elapsedTime / 60); // 5 chars = 1 word
+    const wpm = wordsToType[currentWordIndex].length / 5 / (elapsedTime / 60); // 5 chars = 1 word
     const accuracy = (wordsToType[currentWordIndex].length / inputField.value.length) * 100;
 
     return { wpm: wpm.toFixed(2), accuracy: accuracy.toFixed(2) };
@@ -65,7 +65,8 @@ const getCurrentStats = () => {
 
 // Move to the next word and update stats only on spacebar press
 const updateWord = (event) => {
-    if (event.key === " ") { // Check if spacebar is pressed
+    if (event.key === " ") {
+        // Check if spacebar is pressed
         if (inputField.value.trim() === wordsToType[currentWordIndex]) {
             if (!previousEndTime) previousEndTime = startTime;
 

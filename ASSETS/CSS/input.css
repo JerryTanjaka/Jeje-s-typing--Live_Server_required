@@ -2,12 +2,8 @@
 @import "tailwindcss";
 :root{
     --primary-color : #1c293a;
-    --secondary-colot : #23354d
+    --secondary-color : #23354d;
 }
 *{
-    font-family: "poppins";
+    font-family: 'Fira Code', monospace;
 }
-@font-face {
-    font-family: "poppins";
-    src: url(../Quicksand/static/Quicksand-Medium.ttf);
-  }
