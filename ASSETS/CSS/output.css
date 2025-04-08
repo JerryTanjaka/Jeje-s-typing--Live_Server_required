@@ -9,6 +9,8 @@
       "Courier New", monospace;
     --color-white: #fff;
     --spacing: 0.25rem;
+    --text-2xl: 1.5rem;
+    --text-2xl--line-height: calc(2 / 1.5);
     --text-4xl: 2.25rem;
     --text-4xl--line-height: calc(2.5 / 2.25);
     --text-5xl: 3rem;
@@ -167,18 +169,6 @@
   .flex {
     display: flex;
   }
-  .h-\[100vh\] {
-    height: 100vh;
-  }
-  .h-screen {
-    height: 100vh;
-  }
-  .w-\[5vw\] {
-    width: 5vw;
-  }
-  .flex-grow {
-    flex-grow: 1;
-  }
   .flex-col {
     flex-direction: column;
   }
@@ -197,9 +187,6 @@
   .gap-6 {
     gap: calc(var(--spacing) * 6);
   }
-  .gap-10 {
-    gap: calc(var(--spacing) * 10);
-  }
   .border-4 {
     border-style: var(--tw-border-style);
     border-width: 4px;
@@ -211,29 +198,21 @@
   .bg-\[var\(--primary-color\)\] {
     background-color: var(--primary-color);
   }
-  .bg-\[var\(--secondary-color\)\] {
-    background-color: var(--secondary-color);
-  }
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
   }
   .px-10 {
     padding-inline: calc(var(--spacing) * 10);
   }
-  .py-4 {
-    padding-block: calc(var(--spacing) * 4);
-  }
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
   }
-  .py-10 {
-    padding-block: calc(var(--spacing) * 10);
-  }
-  .pt-\[20\%\] {
-    padding-top: 20%;
-  }
   .text-center {
     text-align: center;
+  }
+  .text-2xl {
+    font-size: var(--text-2xl);
+    line-height: var(--tw-leading, var(--text-2xl--line-height));
   }
   .text-4xl {
     font-size: var(--text-4xl);
@@ -263,6 +242,19 @@
   font-family: "poppins";
   src: url(../Quicksand/static/Quicksand-Medium.ttf);
 }
+#header-container {
+  display: flex;
+  flex-direction: row;
+  margin-top: 2%;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 12%;
+  padding-right: 30%;
+  gap: 15%;
+}
+#middle-container {
+  width: 100%;
+}
 #side-bar {
   width: 5vw;
   height: 100vh;
@@ -290,11 +282,16 @@
   transform: scale(1.1);
 }
 .flex-grow {
-  flex-grow: 4;
+  flex-grow: 2;
+}
+#nav-bottom-button {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1000%;
 }
 #card-container-box {
   padding-inline: 8%;
-  padding-block: 4%;
+  padding-block: 3%;
   gap: 5%;
 }
 #card-container {
@@ -326,6 +323,11 @@
   margin-inline: 1%;
   border-bottom: 1px solid whitesmoke;
   background-color: var(--primary-color);
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+.card-container--element:hover {
+  transform: scale(1.1);
 }
 .card-items1, .card-items2, .card-items3, .card-items4 {
   font-size: 25px;
@@ -360,6 +362,12 @@
   padding-block: 6%;
   margin-inline: 1%;
   background-color: #4caf50;
+  cursor: pointer;
+  border: 3px solid transparent;
+  transition: border 0.3s ease-in;
+}
+.card-container--element--exam:hover {
+  border-color: white;
 }
 @property --tw-border-style {
   syntax: "*";

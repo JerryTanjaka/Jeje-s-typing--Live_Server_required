@@ -13,6 +13,19 @@
     font-family: "poppins";
     src: url(../Quicksand/static/Quicksand-Medium.ttf);
 }
+#header-container{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 12%;
+    padding-right: 30%;
+    gap: 15%;
+}
+#middle-container{
+    width: 100%;
+}
 #side-bar{
     width: 5vw;
     height: 100vh;
@@ -49,7 +62,7 @@
 }
 #card-container-box{
     padding-inline: 8%;
-    padding-block: 4%;
+    padding-block: 3%;
     gap: 5%;
 }
 #card-container{
@@ -81,6 +94,11 @@
     margin-inline: 1%;
     border-bottom: 1px solid whitesmoke;
     background-color: var(--primary-color);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+.card-container--element:hover{
+    transform: scale(1.1);
 }
 .card-items1, .card-items2, .card-items3, .card-items4{
     font-size: 25px;
@@ -115,5 +133,12 @@
     padding-block: 6%;
     margin-inline: 1%;
     background-color: #4caf50;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: border 0.3s ease-in;
 }
+.card-container--element--exam:hover{
+    border-color: white;
+}
+
 
