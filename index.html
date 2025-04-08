@@ -2,30 +2,52 @@
 
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="output.css" />
-        <link rel="stylesheet" href="assets/CSS/Poppins/Poppins-Regular.ttf" />
-        <title>Typing Test</title>
-    </head>
 
-    <body class="bg-[var(--primary-color)]">
-        <header class="">
-            <h1 class="">Typing Test</h1>
-            <label for="mode">Select Mode:</label>
-            <select id="mode">
-                <option value="easy">Easy</option>
-                <option value="medium">Medium</option>
-                <option value="hard">Hard</option>
-            </select>
-        </header>
-        <main class="flex-1/5 flex">
-            <p id="word-display"></p>
-            <input type="text" id="input-field" autofocus />
-            <p id="results">Results :</p>
-        </main>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./ASSETS/CSS/input.css" />
+    <link rel="stylesheet" href="output.css" />
+    <link rel="stylesheet" href="ASSETS/CSS/Poppins/Poppins-Regular.ttf" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <title>Typing Test</title>
+</head>
+
+<body class="bg-[var(--primary-color)]">
+    <div class="flex flex-row h-screen">
+        <nav>
+            <ul class="flex flex-col items-center bg-[var(--secondary-color)] w-[5vw] h-[100vh] gap-10 py-4">
+                <li><i class="fa-solid fa-graduation-cap icon-nav py-5"></i></li>
+                <li><i class="fa-solid fa-font icon-nav py-5"></i></li>
+                <li><i class="fa-solid fa-clipboard-list icon-nav py-5"></i></li>
+                <li><i class="fa-solid fa-gear icon-nav-settings py-5"></i></li>
+                <li><i class="fa-solid fa-power-off icon-nav-off py-5"></i></li>
+            </ul>
+        </nav>
+
+        <div class="flex flex-col px-10 py-5">
+            <header class="flex flex-col px-5"> 
+                <h1 class="text-center text-5xl font-bold">Typing Test</h1>
+                <div class="flex flex-row">
+                    <label for="mode">Select Mode:</label>
+                    <select id="mode">
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+
+                <main class="flex flex-col">
+                    <p id="word-display"></p>
+                    <input type="text" id="input-field" autofocus />
+                    <p id="results">Results :</p>
+                </main>
+            </header>
+        </div>
+
 
         <script src="script.js"></script>
-    </body>
+    </div>
+</body>
+
 </html>

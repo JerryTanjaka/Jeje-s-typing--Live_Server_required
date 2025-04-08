@@ -1,13 +1,32 @@
 /*stylesheet fot typing game*/
 @import "tailwindcss";
+
 :root{
     --primary-color : #1c293a;
-    --secondary-colot : #23354d
+    --secondary-color : #23354d;
 }
 *{
     font-family: "poppins";
+    color: white;
 }
 @font-face {
     font-family: "poppins";
     src: url(../Quicksand/static/Quicksand-Medium.ttf);
-  }
+}
+.icon-nav, .icon-nav-off, .icon-nav-settings{
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+.icon-nav:hover{
+    color: rgb(147, 202, 64);
+    transform: scale(1.1);
+}
+.icon-nav-off:hover{
+    color: rgb(255, 55, 55);
+    transform: scale(1.1);
+}
+.icon-nav-settings:hover{
+    color: #fbbf24;
+    transform: scale(1.1);
+}
