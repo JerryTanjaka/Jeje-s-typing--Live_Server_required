@@ -7,7 +7,10 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-white: #fff;
     --spacing: 0.25rem;
+    --text-4xl: 2.25rem;
+    --text-4xl--line-height: calc(2.5 / 2.25);
     --text-5xl: 3rem;
     --text-5xl--line-height: 1;
     --font-weight-bold: 700;
@@ -164,9 +167,6 @@
   .flex {
     display: flex;
   }
-  .table {
-    display: table;
-  }
   .h-\[100vh\] {
     height: 100vh;
   }
@@ -175,15 +175,6 @@
   }
   .w-\[5vw\] {
     width: 5vw;
-  }
-  .border-collapse {
-    border-collapse: collapse;
-  }
-  .transform {
-    transform: var(--tw-rotate-x) var(--tw-rotate-y) var(--tw-rotate-z) var(--tw-skew-x) var(--tw-skew-y);
-  }
-  .resize {
-    resize: both;
   }
   .flex-col {
     flex-direction: column;
@@ -194,12 +185,22 @@
   .items-center {
     align-items: center;
   }
+  .justify-center {
+    justify-content: center;
+  }
+  .gap-4 {
+    gap: calc(var(--spacing) * 4);
+  }
   .gap-10 {
     gap: calc(var(--spacing) * 10);
   }
-  .border {
+  .border-4 {
     border-style: var(--tw-border-style);
-    border-width: 1px;
+    border-width: 4px;
+  }
+  .border-solid {
+    --tw-border-style: solid;
+    border-style: solid;
   }
   .bg-\[var\(--primary-color\)\] {
     background-color: var(--primary-color);
@@ -219,29 +220,18 @@
   .py-5 {
     padding-block: calc(var(--spacing) * 5);
   }
-  .py-6 {
-    padding-block: calc(var(--spacing) * 6);
-  }
   .py-10 {
     padding-block: calc(var(--spacing) * 10);
   }
-  .py-64 {
-    padding-block: calc(var(--spacing) * 64);
-  }
-  .pb-0 {
-    padding-bottom: calc(var(--spacing) * 0);
-  }
-  .pb-5 {
-    padding-bottom: calc(var(--spacing) * 5);
-  }
-  .pb-10 {
-    padding-bottom: calc(var(--spacing) * 10);
-  }
-  .pb-\[20\%\] {
-    padding-bottom: 20%;
+  .pt-10 {
+    padding-top: calc(var(--spacing) * 10);
   }
   .text-center {
     text-align: center;
+  }
+  .text-4xl {
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
   }
   .text-5xl {
     font-size: var(--text-5xl);
@@ -251,12 +241,8 @@
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
   }
-  .underline {
-    text-decoration-line: underline;
-  }
-  .outline {
-    outline-style: var(--tw-outline-style);
-    outline-width: 1px;
+  .text-white {
+    color: var(--color-white);
   }
 }
 :root {
@@ -288,30 +274,74 @@
   color: #fbbf24;
   transform: scale(1.1);
 }
-@property --tw-rotate-x {
-  syntax: "*";
-  inherits: false;
-  initial-value: rotateX(0);
+#card-container-box {
+  padding-inline: 8%;
+  padding-block: 4%;
+  gap: 5%;
 }
-@property --tw-rotate-y {
-  syntax: "*";
-  inherits: false;
-  initial-value: rotateY(0);
+#card-container {
+  width: 40vh;
+  height: auto;
+  align-items: center;
+  padding-block: 5%;
+  background-color: var(--secondary-color);
+  border-radius: 12px;
 }
-@property --tw-rotate-z {
-  syntax: "*";
-  inherits: false;
-  initial-value: rotateZ(0);
+.card-container--items {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  border-radius: 15px 15px 0px 0px;
+  padding-bottom: 5%;
 }
-@property --tw-skew-x {
-  syntax: "*";
-  inherits: false;
-  initial-value: skewX(0);
+.card-container--element {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  height: auto;
+  padding-block: 4%;
+  margin-inline: 1%;
+  border-bottom: 1px solid whitesmoke;
+  background-color: var(--primary-color);
 }
-@property --tw-skew-y {
-  syntax: "*";
-  inherits: false;
-  initial-value: skewY(0);
+.card-items1, .card-items2, .card-items3, .card-items4 {
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  border-radius: 5px 5px 0px 0px;
+}
+.card-items1 {
+  background-color: #4caf50;
+}
+.card-items2 {
+  background-color: #ff9800;
+}
+.card-items3 {
+  background-color: #9c27b0;
+}
+.card-items4 {
+  background-color: #f44336;
+}
+.card-subtitle {
+  font-size: 15px;
+  color: #4caf50;
+}
+.card-container--element--exam {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  height: auto;
+  padding-block: 6%;
+  margin-inline: 1%;
+  background-color: #4caf50;
 }
 @property --tw-border-style {
   syntax: "*";
@@ -322,22 +352,11 @@
   syntax: "*";
   inherits: false;
 }
-@property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
-      --tw-rotate-x: rotateX(0);
-      --tw-rotate-y: rotateY(0);
-      --tw-rotate-z: rotateZ(0);
-      --tw-skew-x: skewX(0);
-      --tw-skew-y: skewY(0);
       --tw-border-style: solid;
       --tw-font-weight: initial;
-      --tw-outline-style: solid;
     }
   }
 }
