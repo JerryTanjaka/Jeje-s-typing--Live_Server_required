@@ -2,6 +2,6 @@
   "tabWidth": 3,
   "useTabs": false,
   "plugins": ["prettier-plugin-tailwindcss"],
-  "printWidth": 120
+  "printWidth": 180
 }
  

@@ -10,33 +10,43 @@
       <link rel="stylesheet" href="ASSETS/CSS/style.css" />
       <link rel="stylesheet" href="output.css" />
    </head>
-   <body class="flex min-h-screen flex-col items-center justify-center px-4">
-      <div class="flex w-full max-w-4xl flex-col items-center space-y-10 text-center">
-         <h1 class="text-5xl font-semibold tracking-tight">JEJE'S TYPING MASTER</h1>
-         <div
-            class="m-8 grid min-w-[60vw] grid-cols-3 rounded-2xl bg-[var(--secondary-color)] p-8 shadow-sm shadow-indigo-600"
-         >
-            <div class="w-32">
-               <label for="mode">Select Mode:</label>
-               <select id="mode">
-                  <option value="easy">Easy</option>
-                  <option value="medium">Medium</option>
-                  <option value="hard">Hard</option>
-               </select>
-            </div>
-            <div class="w-32">
-               second
-               <p id="results" class="mt-2 text-2xl text-indigo-600 flex justify-around">Results:</p>
-            </div>
-            <div class="w-32">third</div>
+   <body class="flex min-h-screen flex-col items-center px-4">
+      <h2 class="m-4 self-start text-4xl font-semibold tracking-tight">
+         <span class="text-emerald-400">JE</span><span>JE'</span><span class="text-emerald-400">S</span><span class="text--400"> TYPING</span
+         ><span class="text-emerald-400"> MASTER</span>
+      </h2>
+      <div class="flex w-full max-w-4xl flex-col items-center space-y-5 text-center">
+         <div class="flex">
+            <label for="mode">Select Mode:</label>
+            <select id="mode">
+               <option value="easy">Easy</option>
+               <option value="medium">Medium</option>
+               <option value="hard">Hard</option>
+            </select>
          </div>
-         <div class="w-[80vw] space-y-7 rounded-2xl bg-[var(--secondary-color)] p-8 shadow-lg shadow-zinc-900">
-            <div id="word-display" class="min-h-[80px] text-2xl leading-relaxed break-words select-none">
+         <div class="grid max-h-[180px] min-w-[60vw] grid-cols-3 rounded-2xl bg-[var(--secondary-color)] p-2 shadow-sm shadow-emerald-400">
+            <div class="flex w-56 flex-col items-center">
+               <img class="max-w-[80px] self-center" src="assets/Photos/abc-svgrepo-com.png" alt="" />
+               <p id="wpm-result" class="mt-2 text-3xl text-white"></p>
+               <p id="wpm-result" class="mt-2 text-3xl text-white">WPM</p>
             </div>
+            <div class="flex w-56 flex-col items-center">
+               <img class="max-w-[80px] self-center brightness-90" src="assets/Photos/time-complexity-svgrepo-com.svg" alt="" />
+               <p id="time" class="mt-2 text-3xl text-white">0</p>
+               <p id="wpm-result" class="mt-2 text-3xl text-white">Time</p>
+            </div>
+            <div class="flex w-56 flex-col items-center">
+               <img class="max-w-[80px] self-center bg-amber-500 p-2 rounded-2xl" src="assets/Photos/target-arrow-svgrepo-com.png" alt="" />
+               <p id="accuracy-result" class="mt-2 text-3xl text-white"></p>
+               <p id="wpm-result" class="mt-2 text-3xl text-white">Accuracy</p>
+            </div>         </div>
+         <div class="w-[80vw] space-y-7 rounded-2xl bg-[var(--secondary-color)] p-8 shadow-lg shadow-zinc-900">
+            <div id="word-display" class="min-h-[80px] text-2xl leading-relaxed break-words select-none"></div>
             <input
+               autocomplete="off"
                id="input-field"
                type="text"
-               class="w-full rounded-xl border-none bg-neutral-700 px-4 py-3 text-lg text-white focus:ring-4 focus:ring-indigo-600 focus:outline-none"
+               class="w-full rounded-xl border-none bg-neutral-700 px-4 py-3 text-lg text-white focus:ring-2 focus:ring-white/50 focus:outline-none"
                placeholder="Start typing here..."
                autofocus
             />
@@ -44,7 +54,7 @@
          <div class="flex items-center justify-center text-sm text-neutral-400">
             <button
                id="restart"
-               class="mx-auto w-fit rounded-lg bg-indigo-600 px-8 py-4 text-lg text-white ring-indigo-600 duration-100 hover:bg-indigo-700 focus:ring-2 focus:ring-offset-2 focus:outline-none active:scale-95"
+               class="mx-auto w-fit rounded-lg bg-emerald-600 px-8 py-4 text-lg text-white ring-emerald-600 duration-100 hover:bg-emerald-700 focus:ring-2 focus:ring-offset-2 focus:outline-none active:scale-95"
             >
                RESTART
             </button>
