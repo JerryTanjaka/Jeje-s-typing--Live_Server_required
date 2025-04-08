@@ -10,22 +10,24 @@
         <link rel="stylesheet" href="output.css" />
     </head>
     <body class="flex min-h-screen flex-col items-center justify-center px-4">
-        <div class="w-full max-w-4xl space-y-10 text-center">
+        <div class="flex w-full max-w-4xl flex-col items-center space-y-10 text-center">
             <h1 class="text-5xl font-semibold tracking-tight">JEJE'S TYPING MASTER</h1>
-            <label for="mode">Select Mode:</label>
-            <select id="mode">
-                <option value="easy">Easy</option>
-                <option value="medium">Medium</option>
-                <option value="hard">Hard</option>
-            </select>
-            <div class="space-y-6 rounded-2xl bg-[var(--secondary-color)] p-8 shadow-xl">
+            <div>
+                <label for="mode">Select Mode:</label>
+                <select id="mode">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                </select>
+            </div>
+            <div class="w-[80vw] space-y-7 rounded-2xl bg-[var(--secondary-color)] p-8 shadow-lg shadow-zinc-900">
                 <div id="word-display" class="min-h-[80px] text-2xl leading-relaxed break-words select-none">
                     <p></p>
                 </div>
                 <input
                     id="input-field"
                     type="text"
-                    class="focus:ring-indigo-600 w-full rounded-xl border-none bg-neutral-700 px-4 py-3 text-lg text-white focus:ring-4 focus:outline-none"
+                    class="w-full rounded-xl border-none bg-neutral-700 px-4 py-3 text-lg text-white focus:ring-4 focus:ring-indigo-600 focus:outline-none"
                     placeholder="Start typing here..."
                     autofocus
                 />
@@ -34,7 +36,7 @@
             <div class="flex items-center justify-center text-sm text-neutral-400">
                 <button
                     id="restart"
-                    class="mx-auto w-fit rounded-lg bg-indigo-600 px-8 py-4 text-lg text-white uppercase ring-indigo-400 duration-300 hover:bg-indigo-700 focus:ring-2 focus:ring-offset-2 focus:outline-none active:bg-red-400"
+                    class="mx-auto w-fit rounded-lg bg-indigo-600 px-8 py-4 text-lg text-white uppercase ring-indigo-600 duration-300 hover:bg-indigo-700 focus:ring-2 focus:ring-offset-2 focus:outline-none active:bg-emerald-500 active:ring-emerald-300"
                 >
                     Restart
                 </button>
