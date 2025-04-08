@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../test"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "a-new-typing-game-with-vanilla-js",
+		"liveServer.settings.port": 5501
+	}
+}

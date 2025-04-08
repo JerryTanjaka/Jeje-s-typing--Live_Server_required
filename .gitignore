@@ -1,3 +1,4 @@
 node_modules/
-.prettierrs
+*.log
+dist/
 variable.js

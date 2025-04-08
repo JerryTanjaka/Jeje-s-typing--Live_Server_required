@@ -1,0 +1,10 @@
+/*stylesheet fot typing game*/
+@import "tailwindcss";
+ 
+:root{
+    --primary-color : #1c293a;
+    --secondary-color : #23354d;
+} 
+*{
+    font-family: 'Fira Code', monospace;
+}
