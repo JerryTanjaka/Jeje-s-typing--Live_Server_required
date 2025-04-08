@@ -13,6 +13,15 @@
     font-family: "poppins";
     src: url(../Quicksand/static/Quicksand-Medium.ttf);
 }
+#side-bar{
+    width: 5vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 2%;
+    background-color: var(--secondary-color);
+}
 .icon-nav, .icon-nav-off, .icon-nav-settings{
     font-size: 2rem;
     color: white;
@@ -29,6 +38,14 @@
 .icon-nav-settings:hover{
     color: #fbbf24;
     transform: scale(1.1);
+}
+.flex-grow{
+    flex-grow: 2;
+}
+#nav-bottom-button{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1000%;
 }
 #card-container-box{
     padding-inline: 8%;

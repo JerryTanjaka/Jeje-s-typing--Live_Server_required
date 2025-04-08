@@ -176,6 +176,9 @@
   .w-\[5vw\] {
     width: 5vw;
   }
+  .flex-grow {
+    flex-grow: 1;
+  }
   .flex-col {
     flex-direction: column;
   }
@@ -190,6 +193,9 @@
   }
   .gap-4 {
     gap: calc(var(--spacing) * 4);
+  }
+  .gap-6 {
+    gap: calc(var(--spacing) * 6);
   }
   .gap-10 {
     gap: calc(var(--spacing) * 10);
@@ -223,8 +229,8 @@
   .py-10 {
     padding-block: calc(var(--spacing) * 10);
   }
-  .pt-10 {
-    padding-top: calc(var(--spacing) * 10);
+  .pt-\[20\%\] {
+    padding-top: 20%;
   }
   .text-center {
     text-align: center;
@@ -257,6 +263,15 @@
   font-family: "poppins";
   src: url(../Quicksand/static/Quicksand-Medium.ttf);
 }
+#side-bar {
+  width: 5vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 2%;
+  background-color: var(--secondary-color);
+}
 .icon-nav, .icon-nav-off, .icon-nav-settings {
   font-size: 2rem;
   color: white;
@@ -273,6 +288,9 @@
 .icon-nav-settings:hover {
   color: #fbbf24;
   transform: scale(1.1);
+}
+.flex-grow {
+  flex-grow: 4;
 }
 #card-container-box {
   padding-inline: 8%;
