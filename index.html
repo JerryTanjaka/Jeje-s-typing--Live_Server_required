@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="bg-neutral-900 text-white">
+<html lang="en" class="bg-[var(--primary-color)] text-white">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,23 +18,23 @@
                 <option value="medium">Medium</option>
                 <option value="hard">Hard</option>
             </select>
-            <div class="space-y-6 rounded-2xl bg-neutral-800 p-8 shadow-xl">
+            <div class="space-y-6 rounded-2xl bg-[var(--secondary-color)] p-8 shadow-xl">
                 <div id="word-display" class="min-h-[80px] text-2xl leading-relaxed break-words select-none">
                     <p></p>
                 </div>
                 <input
                     id="input-field"
                     type="text"
-                    class="w-full rounded-xl border-none bg-neutral-700 px-4 py-3 text-lg text-white focus:ring-2 focus:ring-indigo-500 focus:outline-none"
+                    class="focus:ring-indigo-600 w-full rounded-xl border-none bg-neutral-700 px-4 py-3 text-lg text-white focus:ring-4 focus:outline-none"
                     placeholder="Start typing here..."
                     autofocus
                 />
-                <p id="results" class="mt-2 text-sm text-indigo-600">Results:</p>
+                <p id="results" class="mt-2 text-2xl text-indigo-600">Results:</p>
             </div>
             <div class="flex items-center justify-center text-sm text-neutral-400">
                 <button
                     id="restart"
-                    class="rounded-lg bg-indigo-600 px-8 py-4 text-white transition-all hover:bg-indigo-700"
+                    class="mx-auto w-fit rounded-lg bg-indigo-600 px-8 py-4 text-lg text-white uppercase ring-indigo-400 duration-300 hover:bg-indigo-700 focus:ring-2 focus:ring-offset-2 focus:outline-none active:bg-red-400"
                 >
                     Restart
                 </button>

@@ -13,6 +13,7 @@ const modeSelect = document.getElementById("mode");
 const wordDisplay = document.getElementById("word-display");
 const inputField = document.getElementById("input-field");
 const results = document.getElementById("results");
+const restart = document.getElementById("restart");
 
 const words = {
     easy: ["apple", "banana", "grape", "orange", "cherry"],
@@ -105,3 +106,6 @@ modeSelect.addEventListener("change", () => startTest());
 
 // Start the test
 startTest();
+restart.addEventListener("click", () => {
+    startTest();
+});
