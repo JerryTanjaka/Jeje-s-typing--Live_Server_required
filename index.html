@@ -8,6 +8,8 @@
       <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet" />
       <link rel="stylesheet" href="ASSETS/CSS/input.css" />
       <link rel="stylesheet" href="ASSETS/CSS/style.css" />
+      <script src="assets/js/time.js" defer></script>
+      <script src="script.js" defer></script>
       <link rel="stylesheet" href="output.css" />
    </head>
    <body class="flex min-h-screen flex-col items-center px-4">
@@ -24,23 +26,25 @@
                <option value="hard">Hard</option>
             </select>
          </div>
-         <div class="grid max-h-[180px] min-w-[60vw] grid-cols-3 rounded-2xl bg-[var(--secondary-color)] p-2 shadow-sm shadow-emerald-400">
+         <div class="rin g-1 grid max-h-[180px] min-w-[60vw] grid-cols-3 rounded-2xl border-[0.05px] border-white/15 bg-[var(--secondary-color)] p-2">
             <div class="flex w-56 flex-col items-center">
                <img class="max-w-[80px] self-center" src="assets/Photos/abc-svgrepo-com.png" alt="" />
                <p id="wpm-result" class="mt-2 text-3xl text-white"></p>
-               <p id="wpm-result" class="mt-2 text-3xl text-white">WPM</p>
+               <p id="wpm-result" class="mt-2 text-xl text-white">WPM</p>
             </div>
             <div class="flex w-56 flex-col items-center">
-               <img class="max-w-[80px] self-center brightness-90" src="assets/Photos/time-complexity-svgrepo-com.svg" alt="" />
-               <p id="time" class="mt-2 text-3xl text-white">0</p>
-               <p id="wpm-result" class="mt-2 text-3xl text-white">Time</p>
+               <img class="max-w-[80px] self-center brightness-95" src="assets/Photos/time-complexity-svgrepo-com.svg" alt="" />
+               <p id="timezone" class="mt-2 text-3xl text-white">0</p>
+               <p id="wpm-result" class="mt-2 text-xl text-white">Time</p>
+
             </div>
             <div class="flex w-56 flex-col items-center">
-               <img class="max-w-[80px] self-center bg-amber-500 p-2 rounded-2xl" src="assets/Photos/target-arrow-svgrepo-com.png" alt="" />
+               <img class="max-w-[80px] self-center rounded-2xl bg-amber-600 p-2" src="assets/Photos/target-arrow-svgrepo-com.png" alt="" />
                <p id="accuracy-result" class="mt-2 text-3xl text-white"></p>
-               <p id="wpm-result" class="mt-2 text-3xl text-white">Accuracy</p>
-            </div>         </div>
-         <div class="w-[80vw] space-y-7 rounded-2xl bg-[var(--secondary-color)] p-8 shadow-lg shadow-zinc-900">
+               <p id="wpm-result" class="mt-2 text-xl text-white">Accuracy</p>
+            </div>
+         </div>
+         <div class="w-[80vw] space-y-7 rounded-2xl bg-[var(--secondary-color)] p-8 ring-1 ring-emerald-600">
             <div id="word-display" class="min-h-[80px] text-2xl leading-relaxed break-words select-none"></div>
             <input
                autocomplete="off"
@@ -53,13 +57,15 @@
          </div>
          <div class="flex items-center justify-center text-sm text-neutral-400">
             <button
-               id="restart"
+            id="mybtn"
                class="mx-auto w-fit rounded-lg bg-emerald-600 px-8 py-4 text-lg text-white ring-emerald-600 duration-100 hover:bg-emerald-700 focus:ring-2 focus:ring-offset-2 focus:outline-none active:scale-95"
             >
                RESTART
             </button>
          </div>
       </div>
-      <script src="script.js"></script>
+      <div>
+         
+      </div>
    </body>
 </html>

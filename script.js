@@ -1,3 +1,4 @@
+
 /**
  * Point culture :
  * Dans ce genre de jeu, un mot équivaut à 5 caractères, y compris les espaces.
@@ -16,7 +17,7 @@ const inputField = document.getElementById("input-field");
 const wpmResult = document.getElementById("wpm-result"); // Zone pour afficher le WPM
 const accuracyResult = document.getElementById("accuracy-result"); // Zone pour afficher la précision
 const restart = document.getElementById("restart");
-
+const timer = document.getElementById("timer")
 const words = {
    easy: ["apple", "banana", "grape", "orange", "cherry"],
    medium: ["keyboard", "monitor", "printer", "charger", "battery"],
@@ -128,3 +129,14 @@ restart.addEventListener("click", () => {
    restart.classList.add("active:scale-95");
    startTest();
 });
+let secondes = 0;
+
+const decompte = () => {
+   secondes++;
+   if (secondes < 100) {
+       stop();
+   } else {
+       // document.body.innerHTML += secondes + "<br>";
+       timer.textContent = secondes;
+   }
+};
