@@ -11,3 +11,17 @@
     padding: 0;
     box-sizing: border-box;
 }
+  .correct {
+    color: #34d399; /* vert */
+  }
+  .incorrect {
+    color: #f87171; /* rouge */
+  }
+  .current {
+    text-decoration: underline;
+  }
+.word {
+  margin-right: 0.5rem; /* ou ce que tu veux */
+  display: inline-block;
+}
+
