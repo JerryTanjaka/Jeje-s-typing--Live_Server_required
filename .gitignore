@@ -2,3 +2,5 @@ node_modules/
 *.log
 dist/
 variable.js
+output.css
+
