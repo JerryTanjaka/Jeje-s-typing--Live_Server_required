@@ -41,3 +41,23 @@
   from { box-shadow: 0 0 5px #FF00FF; }
   to { box-shadow: 0 0 20px #00FFFF; }
 }
+/* début */
+/*stylesheet fot typing game*/
+
+.icon-nav, .icon-nav-off, .icon-nav-settings{
+    font-size: 2.3rem;
+    color: white;
+    cursor: pointer;
+}
+.icon-nav:hover{
+    color:  #34d399;
+    transform: scale(1.25);
+}
+.icon-nav-off:hover{
+    color: rgb(255, 55, 55);
+    transform: scale(1.25);
+}
+.icon-nav-settings:hover{
+    color: #fbbf24;
+    transform: scale(1.25);
+}
