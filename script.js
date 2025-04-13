@@ -100,35 +100,35 @@ const startTimer = () => {
 const getCurrentStats = () => {
     // S'assurer que startTime est défini pour éviter les erreurs
     if (!startTime) return { wpm: "0", accuracy: "0", correctChars: 0, wordChars: 0 };
-    
+
     // Pour le WPM global, mesurer depuis le début du test
     const totalElapsedMinutes = (Date.now() - startTime) / 1000 / 60; // temps en minutes
-    
+
     // Calcul du WPM (mots par minute)
     // Un "mot" standard est considéré comme 5 caractères
-    const globalWpm = (totalKeystrokes / 5) / totalElapsedMinutes;
-    
+    const globalWpm = totalKeystrokes / 5 / totalElapsedMinutes;
+
     // Calcul d'accuracy corrigé pour le mot actuel
     const targetWord = wordsToType[currentWordIndex];
     const typedWord = inputField.value;
     let correctChars = 0;
-    
+
     for (let i = 0; i < typedWord.length && i < targetWord.length; i++) {
         if (typedWord[i] === targetWord[i]) {
             correctChars++;
         }
     }
-    
+
     const wordChars = Math.max(typedWord.length, targetWord.length);
-    
+
     // Calcul de l'accuracy globale
-    const globalAccuracy = (totalCorrectChars + correctChars) / (totalChars + wordChars) * 100;
-    
-    return { 
-        wpm: globalWpm.toFixed(2), 
+    const globalAccuracy = ((totalCorrectChars + correctChars) / (totalChars + wordChars)) * 100;
+
+    return {
+        wpm: globalWpm.toFixed(2),
         accuracy: globalAccuracy.toFixed(2),
         correctChars: correctChars,
-        wordChars: wordChars
+        wordChars: wordChars,
     };
 };
 
@@ -136,28 +136,28 @@ const getCurrentStats = () => {
 const updateWord = (event) => {
     if (event.key === " ") {
         if (!previousEndTime) previousEndTime = startTime;
-        
+
         // Ajouter les caractères du mot complété au compteur global
         totalKeystrokes += wordsToType[currentWordIndex].length;
 
         const stats = getCurrentStats();
-        
-        
+
         // Mise à jour des totaux après le calcul
         totalCorrectChars += stats.correctChars;
         totalChars += stats.wordChars;
-        
+
         wpmResult.textContent = stats.wpm;
         accuracyResult.textContent = `${stats.accuracy}%`;
-        
+
         currentWordIndex++;
         previousEndTime = Date.now();
         inputField.value = "";
         highlightNextWord();
 
         if (currentWordIndex >= wordsToType.length) {
-         inputField.disabled = true;
-         inputField.value = "Test terminé 🎉";}
+            inputField.disabled = true;
+            inputField.value = "Test terminé 🎉";
+        }
         event.preventDefault(); // Pour éviter les espaces dans le champ
     }
 };
@@ -165,11 +165,11 @@ const updateWord = (event) => {
 // Highlight du mot actuel
 const highlightNextWord = () => {
     const wordElements = wordDisplay.children;
-    
+
     for (let i = 0; i < wordElements.length; i++) {
         wordElements[i].style.color = "white";
     }
-    
+
     if (currentWordIndex < wordElements.length) {
         wordElements[currentWordIndex].style.color = "red";
     }
@@ -193,4 +193,4 @@ restart.addEventListener("click", () => {
 });
 
 // Lancer le test au chargement
-    startTest();
+startTest();
