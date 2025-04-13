@@ -1,27 +1,43 @@
 /*stylesheet fot typing game*/
 @import "tailwindcss";
- 
-:root{
-    --primary-color : #1c293a;
-    --secondary-color : #23354d;
-} 
-*{
-    font-family: 'Fira Code', monospace;
+
+:root {
+    --primary-color: #1c293a;
+    --secondary-color: #23354d;
+}
+* {
+    font-family: "Fira Code", monospace;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-  .correct {
-    color: #34d399; /* vert */
-  }
-  .incorrect {
-    color: #f87171; /* rouge */
-  }
-  .current {
-    text-decoration: underline;
-  }
-.word {
-  margin-right: 0.5rem; /* ou ce que tu veux */
-  display: inline-block;
+@font-face {
+    font-family: "Digital-7";
+    src: url("/ASSETS/police/ds_digital/DS-DIGIB.TTF") format("truetype");
+    font-weight: lighter;
+    font-style: normal;
+}
+.font-digital {
+    font-family: "Digital-7", monospace;
 }
 
+.correct {
+    color: #34d399; /* vert */
+}
+.incorrect {
+    color: #f87171; /* rouge */
+}
+.current {
+    text-decoration: underline;
+}
+.word {
+    margin-right: 0.5rem; /* ou ce que tu veux */
+    display: inline-block;
+}
+.glow {
+  animation: pulse 2s infinite alternate;
+}
+@keyframes pulse {
+  from { box-shadow: 0 0 5px #FF00FF; }
+  to { box-shadow: 0 0 20px #00FFFF; }
+}
