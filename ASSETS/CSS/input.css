@@ -41,7 +41,7 @@
   from { box-shadow: 0 0 5px #FF00FF; }
   to { box-shadow: 0 0 20px #00FFFF; }
 }
-/* début */
+/* début
 /*stylesheet fot typing game*/
 
 .icon-nav, .icon-nav-off, .icon-nav-settings{
@@ -65,4 +65,4 @@
     transform: scale(1.25);
     transition: all 0.2s ease-in-out
 
-}
+} 
