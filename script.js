@@ -142,7 +142,7 @@ const updateWord = (event) => {
 
         // Décomposer le mot actuel en caractères
         [...wordsToType[currentWordIndex]].forEach((char, index) => {
-            const typedChar = inputField.value[index]; // Récupérer le caractère tapé
+            const typedChar = inputField.value[index];  // Récupérer le caractère tapé
 
             // Si le caractère est correct, on l'incrémente
             if (typedChar === char) {
@@ -150,6 +150,7 @@ const updateWord = (event) => {
             }
         });
         totalKeystrokes += correctCharsInCurrentWord;
+
 
         const stats = getCurrentStats();
 
