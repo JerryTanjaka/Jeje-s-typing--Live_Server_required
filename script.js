@@ -138,7 +138,19 @@ const updateWord = (event) => {
         if (!previousEndTime) previousEndTime = startTime;
 
         // Ajouter les caractères du mot complété au compteur global
-        totalKeystrokes += wordsToType[currentWordIndex].length;
+        let correctCharsInCurrentWord = 0;
+
+        // Décomposer le mot actuel en caractères
+        [...wordsToType[currentWordIndex]].forEach((char, index) => {
+            const typedChar = inputField.value[index];  // Récupérer le caractère tapé
+
+            // Si le caractère est correct, on l'incrémente
+            if (typedChar === char) {
+                correctCharsInCurrentWord++;
+            }
+        });
+        totalKeystrokes += correctCharsInCurrentWord;
+
 
         const stats = getCurrentStats();
 
