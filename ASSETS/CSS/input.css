@@ -11,6 +11,14 @@
     padding: 0;
     box-sizing: border-box;
 }
+@font-face {
+  font-family:"digital" ;
+  src: url('../police/ds_digital/DS-DIGI.TTF');
+}
+.font-digital{
+font-family: "digital";
+}
+
   .correct {
     color: #34d399; /* vert */
   }

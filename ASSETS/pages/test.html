@@ -6,15 +6,14 @@
         <title>Typing Test</title>
         <script src="https://cdn.tailwindcss.com"></script>
         <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" href="ASSETS/CSS/style.css" />
-        <script src="assets/js/time.js" defer></script>
+        <script src="../js/time.js" defer></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
-        <script src="script.js" defer></script>
-        <link rel="stylesheet" href="output.css" />
-        <link rel="stylesheet" href="ASSETS/CSS/input.css" />
+        <script src="../../script.js" defer></script>
+        <link rel="stylesheet" href="../../output.css" />
+        <link rel="stylesheet" href="../CSS/input.css" />
     </head>
     <body class="flex">
-        <nav class="h-screen w-20  bg-[var(--primary-color)]">
+        <nav class="h-screen w-20 bg-[var(--primary-color)]">
             <ul class="flex h-full flex-col items-center gap-10 py-8">
                 <li class="cursor-pointer">
                     <i class="fa-solid fa-graduation-cap icon-nav text-3xl"></i>
@@ -33,10 +32,10 @@
                 </li>
             </ul>
         </nav>
-        <main class="flex min-h-screen w-screen flex-col items-center  bg-[var(--secondary-color)] bg-cover bg-center" style="background-image: url(&quot;/assets/Photos/background/vecteezy_abstract-background-design-background-texture-design-with _18752866-1.jpg&quot;)">
-            <div class="rounded-full flex h-fit self-start border-2 border-indigo-500 px-2.5 shadow-lg shadow-pink-500/15">
+        <main class="flex min-h-screen w-screen flex-col items-center bg-[var(--secondary-color)] bg-cover bg-center" style="background-image: url(&quot;/assets/Photos/background/vecteezy_abstract-background-design-background-texture-design-with _18752866-1.jpg&quot;)">
+            <div class="flex h-fit self-start rounded-full border-2 border-indigo-500 px-2.5 shadow-lg shadow-pink-500/15">
                 <div class="ml-5 w-20">
-                    <img src="assets/Photos/logo/dark.png" alt="" />
+                    <img src="../Photos/logo/dark.png" alt="" />
                 </div>
                 <h2 class="flex items-center space-x-4 text-3xl font-semibold tracking-tight">
                     <span
@@ -62,7 +61,7 @@
                     </div>
                     <div class="flex w-56 flex-col items-center">
                         <img class="max-w-[50px] brightness-95" src="assets/Photos/time-complexity-svgrepo-com.svg" alt="" />
-                        <p id="timezone" class="mt-2 self-center font-digital text-6xl font-extralight tracking-tighter text-emerald-400 transition-transform duration-300 hover:scale-110">0</p>
+                        <p id="timezone" class="font-digital mt-2 self-center text-6xl font-extralight tracking-tighter text-emerald-400 transition-transform duration-300 hover:scale-110">0</p>
                     </div>
                     <div class="flex w-56 flex-col items-center">
                         <img class="max-w-[50px] self-center rounded-2xl bg-blue-400 p-2" src="assets/Photos/target-arrow-svgrepo-com.png" alt="" />
@@ -71,11 +70,13 @@
                     </div>
                 </div>
                 <div class="h-fit w-[88vw] rounded-2xl bg-[var(--primary-color)] p-8 shadow-md shadow-black">
-                    <div id="word-display" class="h-fit max-h-[170px] select-none break-words text-3xl leading-relaxed"></div>
-                    <input autocomplete="off" id="input-field" type="text" class="absolute right-0 top-0 w-0.5 rounded-xl border-none bg-neutral-700 px-4 py-3 text-lg text-white opacity-0 focus:outline-none focus:ring-2 focus:ring-white/50" placeholder="Start typing here..." autofocus />
+                    <!-- <span class="absolute top-0  z-50 h-5 w-5 animate-pulse bg-amber-700">TEST</span> -->
+                    <div id="word-display" class="h-fit max-h-[170px] text-3xl leading-relaxed break-words select-none">
+                    </div>
+                    <input autocomplete="off" id="input-field" type="text" class="absolute top-0 right-0 w-0.5 rounded-xl border-none bg-neutral-700 px-4 py-3 text-lg text-white opacity-0 focus:ring-2 focus:ring-white/50 focus:outline-none" placeholder="Start typing here..." autofocus />
                 </div>
                 <div class="flex items-center justify-center text-sm text-neutral-400">
-                    <button id="mybtn" class="absolute bottom-[80px] mx-auto w-fit rounded-lg bg-emerald-600 px-8 py-4 text-lg text-white ring-emerald-600 duration-100 hover:scale-105 hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 active:scale-95">RESTART</button>
+                    <button id="mybtn" class="absolute bottom-[80px] mx-auto w-fit rounded-lg bg-emerald-600 px-8 py-4 text-lg text-white ring-emerald-600 duration-100 hover:scale-105 hover:bg-emerald-700 focus:ring-2 focus:ring-offset-2 focus:outline-none active:scale-95">RESTART</button>
                 </div>
             </div>
         </main>

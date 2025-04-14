@@ -1,6 +1,7 @@
 node_modules/
 *.log
 dist/
+build/
 variable.js
 output.css
-
+.DS_Store
