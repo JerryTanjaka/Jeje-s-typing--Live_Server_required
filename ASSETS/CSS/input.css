@@ -7,3 +7,90 @@
 *{
     font-family: 'Fira Code', monospace;
 }
+
+/* ajout */
+/* animation personnalisée */
+@keyframes storyset {
+    0% {
+      transform: translateY(50px);
+    }
+    100% {
+      transform: translateY(10px);
+    }
+  }
+  
+  .animate-storyset {
+    animation: storyset 3s infinite alternate;
+  }
+/*début*/
+.body{
+    margin: 0;
+    padding: 0;
+    background-color: #111827;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+.animated-text{
+    font-size: 34px;
+    font-weight: 600;
+    min-width: 280px;
+}
+
+.animated-text span{
+    position: relative;
+}
+
+.animated-text span::before{
+    content: "";
+    color: #38bdf8;
+    animation: words 20s infinite;
+}
+
+.animated-text span::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 120%;
+    background-color: #111827;
+    border-left: 2px solid #38bdf8;
+    right: -8px;
+    animation: curse .8s infinite, type 20s steps(14) infinite;
+}
+
+@keyframes curse {
+    to{
+        border-left: 2px solid #111827;
+    }
+}
+
+@keyframes words {
+    0%,20%{
+        content: "Taper plus vite";
+    }
+    21%,40%{
+        content: "gagner du temps";
+    }
+    41%,60%{
+        content: "soyer plus productif";
+    }
+    61%,80%{
+        content: "surpasser vos limites";
+    }
+    81%,100%{
+        content: "amusez-vous";
+    }
+}
+
+@keyframes type {
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 8px);
+    }
+}
