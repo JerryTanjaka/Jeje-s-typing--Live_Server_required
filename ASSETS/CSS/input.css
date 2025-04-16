@@ -4,6 +4,10 @@
 :root {
     --primary-color: #1c293a;
     --secondary-color: #23354d;
+    --green: #34D399;
+    --orange: #ff9800;
+    --purple : #9c27b0;
+    --red : #f87171
 }
 * {
     font-family: monospace  ;
@@ -205,10 +209,10 @@
     align-items: center;
     width: 100%;
     height: auto;
-    border-radius: 15px 15px 0px 0px;
+    padding-inline: 7%;
     padding-bottom: 5%;
 }
-.card-container--element {
+.card-container--element1, .card-container--element2, .card-container--element3, .card-container--element4 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -220,16 +224,33 @@
     border-bottom: 1px solid whitesmoke;
     background-color: var(--primary-color);
     cursor: pointer;
+    border: 2px solid transparent;
+    border-bottom: 1px solid white;
     transition: transform 0.3s ease-in-out;
 }
-.card-container--element:hover {
-    transform: scale(1.1);
+.card-container--element1:hover {
+    border: 2px solid var(--green);
 }
-.card-container--element h1 {
+.card-container--element2:hover {
+    border: 2px solid var(--orange);
+}
+.card-container--element3:hover {
+    border: 2px solid var(--purple);
+}
+.card-container--element4:hover {
+    border: 2px solid var(--red);
+}
+.card-container--element1 h1,
+.card-container--element2 h1,
+.card-container--element3 h1,
+.card-container--element4 h1 {
     font-size: 30px;
     font-family: 'Fira Code';
 }
-.card-container--element p {
+.card-container--element1 p,
+.card-container--element2 p,
+.card-container--element3 p,
+.card-container--element4 p {
     font-size: 18px;
     font-weight: 100;
     color: white;
@@ -243,19 +264,19 @@
     font-weight: bold;
     text-align: center;
     width: 100%;
-    border-radius: 5px 5px 0px 0px;
+    border-radius: 5px;
 }
 .card-items1 {
-    background-color: #34D399;
+    background-color: var(--green);
 }
 .card-items2 {
-    background-color: #ff9800;
+    background-color: var(--orange);
 }
 .card-items3 {
-    background-color: #9c27b0;
+    background-color: var(--purple);
 }
 .card-items4 {
-    background-color: #f44336;
+    background-color: var(--red);
 }
 .card-subtitle {
     font-size: 15px;
