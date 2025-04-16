@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="../CSS/input.css" />
     </head>
     <body class="flex">
-        <nav class="h-screen w-20 bg-[var(--primary-color)]">
+        <nav class="h-screen w-20 bg-[var(--secondary-color)]">
             <ul class="flex h-full flex-col items-center gap-10 py-8">
                 <li class="cursor-pointer">
                     <i class="fa-solid fa-graduation-cap icon-nav text-3xl"></i>
@@ -32,7 +32,7 @@
                 </li>
             </ul>
         </nav>
-        <main class="flex min-h-screen w-screen flex-col items-center bg-[var(--secondary-color)] bg-cover bg-center" style="background-image: url(&quot;/../Photos/background/vecteezy_abstract-background-design-background-texture-design-with _18752866-1.jpg&quot;)">
+        <main class="flex min-h-screen w-screen flex-col items-center bg-[var(--primary-color)] bg-cover bg-center" style="background-image: url(&quot;/../Photos/background/vecteezy_abstract-background-design-background-texture-design-with _18752866-1.jpg&quot;)">
             <div class="flex h-fit self-start rounded-full border-2 border-indigo-500 px-2.5 shadow-lg shadow-pink-500/15">
                 <div class="ml-5 w-20">
                     <img src="../Photos/logo/dark.png" alt="" />
@@ -53,7 +53,7 @@
                         <option value="hard">Hard</option>
                     </select>
                 </div>
-                <div class="rin g-1 grid max-h-[150px] min-w-[60vw] grid-cols-3 rounded-2xl border-2 border-emerald-400 bg-[var(--primary-color)] p-2">
+                <div class="rin g-1 grid max-h-[150px] min-w-[60vw] grid-cols-3 rounded-2xl border-2 border-emerald-400 bg-[var(--secondary-color)] p-2">
                     <div class="flex w-56 flex-col items-center">
                         <img class="max-w-[50px] self-center" src="../Photos/abc-svgrepo-com.png" alt="" />
                         <p id="wpm-result" class="mt-2 text-3xl text-white"></p>
@@ -69,10 +69,9 @@
                         <p id="wpm-result" class="mt-2 text-xl text-white">Accuracy</p>
                     </div>
                 </div>
-                <div class="h-fit w-[88vw] rounded-2xl bg-[var(--primary-color)] p-8 shadow-md shadow-black">
+                <div class="h-fit w-[88vw] rounded-2xl bg-[var(--secondary-color)] p-8 shadow-md shadow-black">
                     <!-- <span class="absolute top-0  z-50 h-5 w-5 animate-pulse bg-amber-700">TEST</span> -->
-                    <div id="word-display" class="h-fit max-h-[170px] text-3xl leading-relaxed break-words select-none">
-                    </div>
+                    <div id="word-display" class="h-fit max-h-[170px] text-3xl leading-relaxed break-words select-none"></div>
                     <input autocomplete="off" id="input-field" type="text" class="absolute top-0 right-0 w-0.5 rounded-xl border-none bg-neutral-700 px-4 py-3 text-lg text-white opacity-0 focus:ring-2 focus:ring-white/50 focus:outline-none" placeholder="Start typing here..." autofocus />
                 </div>
                 <div class="flex items-center justify-center text-sm text-neutral-400">
