@@ -206,6 +206,9 @@ restart.addEventListener("click", () => {
     restart.classList.add("active:scale-95");
     startTest();
 });
-
 // Lancer le test au chargement
 startTest();
+let dash = document.getElementById("todashboard")
+dash.addEventListener("click",()=>{
+    window.location.href = "dashboard.html";
+})
