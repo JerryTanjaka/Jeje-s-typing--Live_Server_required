@@ -104,3 +104,9 @@ modeSelect.addEventListener("change", () => startTest());
 
 // Start the test
 startTest();
+
+//Redirection to typing-dashboard-page
+const typingButton = document.querySelector("#dashboard-icon")
+typingButton.addEventListener("click", function(){
+    window.location.href = "typing-dashboard.html"
+})
