@@ -12,17 +12,14 @@
     box-sizing: border-box;
 }
 @font-face {
-    font-family: "Digital-7";
-    src: url("/ASSETS/police/ds_digital/DS-DIGIB.TTF") format("truetype");
-    font-weight: lighter;
-    font-style: normal;
+  font-family:"digital" ;
+  src: url('../police/ds_digital/DS-DIGI.TTF');
+}
+.font-digital{
+font-family: "digital";
 }
 
-.font-digital {
-    font-family: "Digital-7", monospace;
-}
-
-.correct {
+  .correct {
     color: #34d399; /* vert */
 }
 .incorrect {
@@ -35,35 +32,27 @@
     margin-right: 0.5rem; /* ou ce que tu veux */
     display: inline-block;
 }
-.glow {
-  animation: pulse 2s infinite alternate;
-}
-@keyframes pulse {
-  from { box-shadow: 0 0 5px #FF00FF; }
-  to { box-shadow: 0 0 20px #00FFFF; }
-}
-/* début */
-/*stylesheet fot typing game*/
+/* debut */
 
 .icon-nav, .icon-nav-off, .icon-nav-settings{
-    font-size: 2.rem;
-    color: white;
-    cursor: pointer;
+  font-size: 2.3rem;
+  color: white;
+  cursor: pointer;
 }
 .icon-nav:hover{
-    color:  #34d399;
-    transform: scale(1.25);
-    transition: all 0.2s ease-in-out
+  color:  #34d399;
+  transform: scale(1.15);
+  transition: all 0.2s ease-in-out
 }
 .icon-nav-off:hover{
-    color: rgb(255, 55, 55);
-    transform: scale(1.25);
-    transition: all 0.2s ease-in-out
+  color: rgb(255, 55, 55);
+  transform: scale(1.15);
+  transition: all 0.2s ease-in-out
 
 }
 .icon-nav-settings:hover{
-    color: #fbbf24;
-    transform: scale(1.25);
-    transition: all 0.2s ease-in-out
+  color: #fbbf24;
+  transform: scale(1.15);
+  transition: all 0.2s ease-in-out
 
 }

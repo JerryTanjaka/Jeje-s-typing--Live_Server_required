@@ -79,6 +79,8 @@ const updateCurrentLetters = () => {
         const expectedChar = charSpan.textContent;
         const typedChar = input[i];
 
+        charSpan.classList.remove("correct", "incorrect", "border-r-2", "border-emerald-400", "animate-pulse");
+        
         if (typedChar == null) {
             charSpan.classList.remove("correct", "incorrect");
         } else if (typedChar === expectedChar) {
@@ -89,6 +91,7 @@ const updateCurrentLetters = () => {
             charSpan.classList.remove("correct");
         }
     }
+    
 };
 
 // Démarrer le chrono au premier input
