@@ -1,10 +1,11 @@
 /*stylesheet fot typing game*/
 @import "tailwindcss";
+
  
 :root{
     --primary-color : #1c293a;
     --secondary-color : #23354d;
-} 
+}
 *{
     font-family: 'Fira Code', monospace;
     margin: 0;
@@ -101,6 +102,139 @@
 }
     
 @font-face {
+    font-family: "poppins";
+    src: url(../Quicksand/static/Quicksand-Medium.ttf);
+}
+#header-container{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 12%;
+    padding-right: 30%;
+    gap: 15%;
+}
+#middle-container{
+    width: 100%;
+}
+#side-bar{
+    width: 5vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 2%;
+    background-color: var(--secondary-color);
+}
+.icon-nav, .icon-nav-off, .icon-nav-settings{
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+.icon-nav:hover{
+    color: rgb(147, 202, 64);
+    transform: scale(1.1);
+}
+.icon-nav-off:hover{
+    color: rgb(255, 55, 55);
+    transform: scale(1.1);
+}
+.icon-nav-settings:hover{
+    color: #fbbf24;
+    transform: scale(1.1);
+}
+.flex-grow{
+    flex-grow: 2;
+}
+#nav-bottom-button{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1000%;
+}
+#card-container-box{
+    padding-inline: 8%;
+    padding-block: 3%;
+    gap: 5%;
+}
+#card-container{
+    width: 40vh;
+    height: auto;
+    align-items: center;
+    padding-block: 5% ;
+    background-color: var(--secondary-color);
+    border-radius: 12px;
+}
+.card-container--items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    border-radius: 15px 15px 0px 0px;
+    padding-bottom: 5%;
+}
+.card-container--element{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    height: auto;
+    padding-block: 4%;
+    margin-inline: 1%;
+    border-bottom: 1px solid whitesmoke;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+.card-container--element:hover{
+    transform: scale(1.1);
+}
+.card-items1, .card-items2, .card-items3, .card-items4{
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    border-radius: 5px 5px 0px 0px;
+}
+.card-items1{
+    background-color: #4caf50;
+}
+.card-items2{
+    background-color: #ff9800;
+}
+.card-items3{
+    background-color: #9c27b0;
+}
+.card-items4{
+    background-color: #f44336;
+}
+.card-subtitle{
+    font-size: 15px;
+    color: #4caf50;
+}
+.card-container--element--exam{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 85%;
+    height: auto;
+    padding-block: 6%;
+    margin-inline: 1%;
+    background-color: #4caf50;
+    cursor: pointer;
+    border: 3px solid transparent;
+    transition: border 0.3s ease-in;
+}
+.card-container--element--exam:hover{
+    border-color: white;
+}
+
+
+#timezone{
   font-family:"digital" ;
   src: url('../police/ds_digital/DS-DIGI.TTF');
 }
