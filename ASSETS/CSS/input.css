@@ -215,7 +215,7 @@
     align-items: center;
     width: 85%;
     height: auto;
-    padding-block: 4%;
+    padding-block: 5%;
     margin-inline: 1%;
     border-bottom: 1px solid whitesmoke;
     background-color: var(--primary-color);
@@ -224,6 +224,16 @@
 }
 .card-container--element:hover {
     transform: scale(1.1);
+}
+.card-container--element h1 {
+    font-size: 30px;
+    font-family: 'Fira Code';
+}
+.card-container--element p {
+    font-size: 18px;
+    font-weight: 100;
+    color: white;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 .card-items1,
 .card-items2,
@@ -236,7 +246,7 @@
     border-radius: 5px 5px 0px 0px;
 }
 .card-items1 {
-    background-color: #4caf50;
+    background-color: #34D399;
 }
 .card-items2 {
     background-color: #ff9800;
@@ -260,7 +270,7 @@
     height: auto;
     padding-block: 6%;
     margin-inline: 1%;
-    background-color: #4caf50;
+    background-color: #34D399;
     cursor: pointer;
     border: 3px solid transparent;
     transition: border 0.3s ease-in;
@@ -268,7 +278,9 @@
 .card-container--element--exam:hover {
     border-color: white;
 }
-
+.card-container--element--exam h2 {
+    font-size: 20px;
+}
 .correct {
     color: #34d399; /* vert */
 }
