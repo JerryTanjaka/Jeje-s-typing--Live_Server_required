@@ -60,6 +60,13 @@ body{
     display: flex;
     flex-direction: row;
 }
+.exercise-section{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 8%;
+    padding-inline: 10%;
+}
 .monitor-container{
     display: flex;
     flex-direction: column;
@@ -68,8 +75,8 @@ body{
     background-color: var(--secondary-color);
     width: 50vw;
     height: 30vh;
-    margin-top: 5%;
-    margin-left: 23%;
+    margin-top: 10%;
+    margin-left: 20%;
     border-radius: 15px;
 }
 .monitor-container--symbols{
@@ -96,4 +103,21 @@ body{
 .monitor-container--legend span{
     font-size: 23px;
     color: white;
+}
+#text-to-type {
+    font-size: 25px;
+    color: white;
+    margin-bottom: 5%;
+}
+#user-input{
+    width: 100%;
+    padding-block: 1%;
+    padding-inline: 2%;
+    border: 1px solid white;
+    border-radius: 8px;
+    font-size: 25px;
+    color: white;
+}
+#user-input::placeholder{
+    color: rgb(138, 137, 137);
 }
