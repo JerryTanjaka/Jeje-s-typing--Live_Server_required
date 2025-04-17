@@ -220,3 +220,9 @@ const logOut = document.getElementById("logOutButton")
 logOut.addEventListener("click", () => {
     window.location.href = "index.html";
 }) 
+
+// Redirection to lesson 1 for beginner (exercise)
+const beginnerLesson1 = document.getElementsByClassName("card-container--element1") 
+beginnerLesson1.addEventListener("click", () => {
+    window.location.href = "./ASSETS/pages/exercises/beginnerLesson1.html"
+})
