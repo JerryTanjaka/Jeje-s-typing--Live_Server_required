@@ -15,13 +15,8 @@ const wordDisplay = document.getElementById("word-display");
 const inputField = document.getElementById("input-field");
 const wpmResult = document.getElementById("wpm-result");
 const accuracyResult = document.getElementById("accuracy-result");
-const restart = document.getElementById("mybtn");
-
-const words = {
-    easy: ["apple", "banana", "grape", "orange", "cherry"],
-    medium: ["keyboard", "monitor", "printer", "charger", "battery"],
-    hard: ["synchronize", "complicated", "development", "extravagant", "misconception"],
-};
+const next = document.getElementById("mybtn");
+import { words } from "./ASSETS/js/word.js";
 
 // Générer un mot aléatoire
 const getRandomWord = (mode) => {
@@ -80,7 +75,7 @@ const updateCurrentLetters = () => {
         const typedChar = input[i];
 
         charSpan.classList.remove("correct", "incorrect", "border-r-2", "border-emerald-400", "animate-pulse");
-        
+
         if (typedChar == null) {
             charSpan.classList.remove("correct", "incorrect");
         } else if (typedChar === expectedChar) {
@@ -91,7 +86,6 @@ const updateCurrentLetters = () => {
             charSpan.classList.remove("correct");
         }
     }
-    
 };
 
 // Démarrer le chrono au premier input
@@ -121,6 +115,21 @@ const getCurrentStats = () => {
             correctChars++;
         }
     }
+    if (currentWordIndex === wordsToType.length - 1) {
+        inputField.disabled = true;
+        next.focus();
+        const handleEnter = (e) => {
+            if (e.key === "Enter") {
+                inputField.disabled = false;
+                inputField.value = "";
+                inputField.focus();
+                startTest();
+                document.removeEventListener("keydown", handleEnter);
+            }
+        };
+
+        document.addEventListener("keydown", handleEnter);
+    }
 
     const wordChars = Math.max(typedWord.length, targetWord.length);
 
@@ -145,7 +154,7 @@ const updateWord = (event) => {
 
         // Décomposer le mot actuel en caractères
         [...wordsToType[currentWordIndex]].forEach((char, index) => {
-            const typedChar = inputField.value[index];  // Récupérer le caractère tapé
+            const typedChar = inputField.value[index]; // Récupérer le caractère tapé
 
             // Si le caractère est correct, on l'incrémente
             if (typedChar === char) {
@@ -153,7 +162,6 @@ const updateWord = (event) => {
             }
         });
         totalKeystrokes += correctCharsInCurrentWord;
-
 
         const stats = getCurrentStats();
 
@@ -181,12 +189,21 @@ const updateWord = (event) => {
 const highlightNextWord = () => {
     const wordElements = wordDisplay.children;
 
+    // Reset all word colors to white
     for (let i = 0; i < wordElements.length; i++) {
         wordElements[i].style.color = "white";
     }
 
+    // Check if the current word index is within bounds
     if (currentWordIndex < wordElements.length) {
         wordElements[currentWordIndex].style.color = "red";
+
+        // Scroll every 50 characters
+        wordElements[currentWordIndex].scrollIntoView({
+            behavior: "smooth",
+            block: "nearest",
+            inline: "start",
+        });
     }
 };
 
@@ -200,15 +217,19 @@ inputField.addEventListener("keydown", updateWord);
 modeSelect.addEventListener("change", () => startTest());
 document.addEventListener("keydown", () => {
     inputField.focus();
-    restart.classList.remove("active:scale-95");
+    next.classList.remove("active:scale-95");
 });
-restart.addEventListener("click", () => {
-    restart.classList.add("active:scale-95");
+next.addEventListener("click", () => {
+    next.classList.add("active:scale-95");
     startTest();
 });
 // Lancer le test au chargement
 startTest();
-let dash = document.getElementById("todashboard")
-dash.addEventListener("click",()=>{
+let dash = document.getElementById("todashboard");
+dash.addEventListener("click", () => {
     window.location.href = "dashboard.html";
-})
+});
+mode.addEventListener("change", () => {
+    inputField.focus();
+});
+if (currentWordIndex == words(mode)) next.focus();

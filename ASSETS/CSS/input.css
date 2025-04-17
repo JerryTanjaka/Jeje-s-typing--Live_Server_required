@@ -6,7 +6,7 @@
     --secondary-color: #23354d;
 }
 * {
-    font-family: monospace  ;
+    font-family: 'Fira Code', monospace;
     margin: 0;
     padding: 0;
     box-sizing: border-box;

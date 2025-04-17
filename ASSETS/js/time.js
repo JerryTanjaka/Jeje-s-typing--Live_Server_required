@@ -29,7 +29,7 @@
       secondes = 0;
       timezone.textContent = secondes;
       start();
-      mybtn.textContent = "Restart";
+      mybtn.textContent = "Next>";
    };
 
    mybtn.addEventListener("click", () => {
