@@ -63,8 +63,8 @@
                             <option value="15">⏱️ 15 s</option>
                             <option value="30">⏱️ 30 s</option>
                             <option value="60">⏱️ 60 s</option>
-                            <option value="infinite">♾️ </option>
-                          </select> 
+                            <option value="infinite">♾️</option>
+                        </select>
                     </div>
                     <div class="flex h-fit items-center justify-center text-sm text-neutral-400">
                         <button id="eye" class="font-digital mx-auto w-fit rounded-lg bg-emerald-600 px-4 py-2 text-2xl tracking-widest text-white ring-emerald-600 duration-100 hover:scale-105 hover:bg-emerald-700 focus:ring-2 focus:ring-offset-2 focus:outline-none active:scale-95">
@@ -84,7 +84,7 @@
                     </div>
                     <div class="flex w-56 flex-col items-center">
                         <img class="max-w-[50px] brightness-95" src="../Photos/time-complexity-svgrepo-com.svg" alt="" />
-                        <p id="timezone" class="font-digital mt-2 self-center text-6xl font-extralight tracking-tighter text-emerald-400 transition-transform duration-300 hover:scale-110 ">0</p>
+                        <p id="timezone" class="font-digital mt-2 self-center text-6xl font-extralight tracking-tighter text-emerald-400 transition-transform duration-300 hover:scale-110">0</p>
                     </div>
                     <div class="flex w-56 flex-col items-center">
                         <img class="max-w-[50px] self-center rounded-2xl bg-blue-400 p-2" src="../Photos/target-arrow-svgrepo-com.png" alt="" />
@@ -92,9 +92,12 @@
                         <p id="wpm-result" class="mt-2 text-xl text-white">Accuracy</p>
                     </div>
                 </div>
-                <div class="mt-4 line-clamp-6 h-[200px] w-[88vw] overflow-y-auto scroll-smooth rounded-2xl bg-[var(--secondary-color)] p-8 text-3xl leading-relaxed break-words shadow-lg shadow-black/40 select-none">
-                    <div id="word-display" class="h-fit max-h-[170px] text-3xl leading-relaxed break-words select-none "></div>
-                    <input autocomplete="off" id="input-field" type="text" class="absolute top-0 right-0 w-0.5 rounded-xl border-none bg-neutral-700 px-4 py-3 text-lg text-white opacity-0 focus:ring-2 focus:ring-white/50 focus:outline-none" placeholder="Start typing here..." autofocus />
+                <div class="relative mt-4 line-clamp-6 h-[200px] w-[88vw] overflow-y-auto scroll-smooth rounded-2xl bg-[var(--secondary-color)] p-8 text-3xl leading-relaxed break-words shadow-lg shadow-black/40 select-none">
+                    <div  class="message absolute top-20 opacity-0 z-50 flex w-full justify-center ">
+                        Appuyer sur entrer ou espace pour commencer
+                    </div>
+                    <div id="word-display" class="h-fit max-h-[170px] text-3xl leading-relaxed break-words select-none"></div>
+                    <input autocomplete="off" id="input-field" type="text" class="absolute top-0 right-0 w-20 rounded-xl border-none bg-neutral-700 px-4 py-3 text-lg text-white opacity-0 focus:ring-2 focus:ring-white/50 focus:outline-none" placeholder="Start typing here..." autofocus />
                 </div>
                 <div class="flex items-center justify-center p-4">
                     <div class="keyboard w-full max-w-4xl rounded-xl border border-slate-600 bg-slate-800 p-4 opacity-0 shadow-lg">
