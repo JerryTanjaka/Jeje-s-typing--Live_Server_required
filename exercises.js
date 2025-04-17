@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const userText = inputField.value;
       let coloredText = '';
   
-      for (let i = 0; i < targetText.length; i++) {
+      for (let i = 0; i < targetText.length; i++) {        // comparaison entre char et user char : 
         const char = targetText[i];                       // char de la consigne avec fj
         const userChar = userText[i];                     // char saisi par l'utilisateur 
   
