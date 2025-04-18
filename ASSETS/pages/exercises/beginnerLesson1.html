@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../../Photos/logo/light.png">
     <link rel="stylesheet" href="../../CSS/exercises.css">
     <link rel="stylesheet" href="../../../output.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
@@ -34,18 +33,24 @@
                     <img src="../../Photos/target-arrow-svgrepo-com.png" alt="accuracy" class="accuracy">
                 </div>
                 <div class="monitor-container--legend">
-                    <span id="wpm-value">WPM</span>
-                    <span id="time-value">TIME</span>
-                    <span id="accuracy-value">ACCURACY</span>
+                    <span>WPM</span>
+                    <span>TIME</span>
+                    <span>ACCURACY</span>
+                </div>
+                <div class="monitor-container--stat">
+                    <span id="wpm-value"></span>
+                    <span id="time-value"></span>
+                    <span id="accuracy-value"></span>
                 </div>
             </section>
 
             <section class="exercise-container">
                 <div id="text-to-type">fj fj fj fj j fj fj fj j fj fj fj j fj fj fj j fj fj fj</div>
-                <input type="text" id="user-input" autofocus placeholder="Start typing here..."/>
+                <input type="text" id="user-input" autofocus autocomplete="off" placeholder="Start typing here..." />
             </section>
+            <button id="restartButton">RESTART</button>
         </div>
-        
+
     </main>
     <script src="../../../exercises.js"></script>
 </body>
