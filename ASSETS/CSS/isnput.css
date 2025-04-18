@@ -4,8 +4,59 @@
     --primary-color: #1c293a;
     --secondary-color: #23354d;
 }
+/* :root {
+    --primary-color: #1e2a3a;
+    --secondary-color: #253344;
+}  */
+.default{
+    --primary-color: #1c293a;
+    --secondary-color: #23354d;
+}
+.light {
+    --primary-color: #bbc2c9; 
+    --secondary-color: #28292a; 
+}
+
+.dark {
+    --primary-color: #0f172a; 
+    --secondary-color: #1e293b; 
+}
+
+.emerald {
+    --primary-color: #064e3b;
+    --secondary-color: #10b981;
+}
+
+.sunset {
+    --primary-color: #ff6b6b;
+    --secondary-color: #ffe66d;
+}
+
+.ocean {
+    --secondary-color: #0077b6;
+    --primary-color: #629199;
+}
+
+
+.charcoal {
+    --seconadry-color: #2b2d42;
+    --primary-color: #636d7e;
+}
+
+.ice {
+    --primary-color: #d8f3dc;
+    --secondary-color: #52b788;
+}
+
+
+/* Puis tu utilises ces variables dans ton CSS Tailwind avec [style] */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
 * {
-    font-family: 'Fira Code', monospace;
+    font-family: "Fira Code", monospace;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
