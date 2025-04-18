@@ -191,20 +191,22 @@
 }
 
 .icon-nav:hover {
-    color: rgb(147, 202, 64);
-    transform: scale(1.1);
+    color: #00FFFF;
+    transform: scale(1.15);
+    transition: all 0.2s ease-in-out;
 }
 
 .icon-nav-off:hover {
     color: rgb(255, 55, 55);
-    transform: scale(1.1);
+    transform: scale(1.15);
+    transition: all 0.2s ease-in-out;
 }
 
 .icon-nav-settings:hover {
     color: #fbbf24;
-    transform: scale(1.1);
+    transform: scale(1.15);
+    transition: all 0.2s ease-in-out;
 }
-
 .flex-grow {
     flex-grow: 2;
 }
@@ -409,22 +411,4 @@ h2 {
     font-size: 2.3rem;
     color: white;
     cursor: pointer;
-}
-
-.icon-nav:hover {
-    color: #00FFFF;
-    transform: scale(1.15);
-    transition: all 0.2s ease-in-out;
-}
-
-.icon-nav-off:hover {
-    color: rgb(255, 55, 55);
-    transform: scale(1.15);
-    transition: all 0.2s ease-in-out;
-}
-
-.icon-nav-settings:hover {
-    color: #fbbf24;
-    transform: scale(1.15);
-    transition: all 0.2s ease-in-out;
 }
