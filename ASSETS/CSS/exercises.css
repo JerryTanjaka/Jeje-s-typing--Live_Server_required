@@ -147,6 +147,7 @@ body{
 }
 #restartButton {
     background-color: rgb(44, 123, 44);
+    font-size: 20px;
     border-radius: 5px;
     width: 10vw;
     height: 8vh;

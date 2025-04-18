@@ -68,35 +68,58 @@ function updateColoredText() {
 
 // Démarrage du typing-test au moment de l'input de l'utilisateur
 document.addEventListener('DOMContentLoaded', () => {
-    updateColoredText(); 
-    
+    updateColoredText();
+
     inputField.addEventListener("input", () => {
         startTimer();
         updateColoredText();
         updateStats();
+
+        // Arrêt de la saisie dans le champ quand le test est fini
+        if (inputField.value.length >= targetText.length) {
+            inputField.disabled = true;
+
+            document.querySelector(".monitor-container").style.border = "3px solid red";
+            document.querySelector(".monitor-container").style.borderRadius = "10px";
+            document.querySelector(".monitor-container").style.padding = "1rem";
+
+            // Activer "disabled" de l'input quand l'utilisateur a fini de saisir tout l'exercice
+            if (inputField.value.length >= targetText.length) {
+                inputField.disabled = true;
+            }
+
+            clearInterval(interval);
+        }
     });
-}); 
+});
 
 // Redémarrage de tous les compteurs à 0 avec le bouton RESTART
-document.addEventListener("DOMContentLoaded", function (){
+document.addEventListener("DOMContentLoaded", function () {
     const restart = document.getElementById("restartButton")
-    restart.addEventListener("click", function (){
+    restart.addEventListener("click", function () {
         // Stoppe le timer
         clearInterval(interval);
-    
+
         // Réinitialiser toutes les précédentes valeurs
         startTime = null;
         interval = null;
-    
+
         // Remettre le compteur et les stats à zéro
         document.getElementById("time-value").textContent = "0s";
         document.getElementById("accuracy-value").textContent = "0%"
         document.getElementById("wpm-value").textContent = "0"
-    
+
         // Vider le champ de saisie
         document.getElementById("user-input").value = "";
 
         // Réinitialiser le texte affiché sans coloration
         display.innerHTML = targetText.split('').map(char => `<span>${char}</span>`).join('');
+
+        // Désactiver "disabled" de l'input quand l'utilisateur appuie sur restart
+        inputField.value = "";
+        inputField.disabled = false;
+
+        // Enlever la bordure rouge quand on restart
+        document.querySelector(".monitor-container").style.border = "";
     })
 })
