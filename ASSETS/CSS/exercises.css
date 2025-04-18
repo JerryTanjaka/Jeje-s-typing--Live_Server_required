@@ -136,7 +136,7 @@ body{
 #user-input::placeholder{
     color: rgb(138, 137, 137);
 }
-h2{
+.exercise-section h2{
     color: var(--green);
     font-family:'Courier New', Courier, monospace;
     font-weight: bold;
