@@ -130,3 +130,18 @@ h2{
     text-align: center;
     margin-top: 5%;
 }
+#restartButton {
+    background-color: rgb(44, 123, 44);
+    border-radius: 5px;
+    width: 10vw;
+    height: 8vh;
+    color: white;
+    border: 1px solid transparent;
+    margin-bottom: 5%;
+    transition: 0.3s ease-out;
+}
+#restartButton:hover{
+    cursor: pointer;
+    transform: scale(1.02);
+    background-color: var(--green);
+}
