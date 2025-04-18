@@ -206,14 +206,17 @@ next.addEventListener("click", () => {
 });
 
 const dash = document.getElementById("todashboard");
- dash.addEventListener("click", () => {
-     window.location.href = "dashboard.html";
- });
-
-
+dash.addEventListener("click", () => {
+    window.location.href = "dashboard.html";
+});
 
 const logout = document.querySelector(".logout");
 logout.addEventListener("click", () => {
     window.location.href = "../../index.html";
 });
-startTest();
+
+
+const settings = document.querySelector(".settings");
+settings.addEventListener("click", () => {
+    window.location.href = "../../index.html";
+});startTest();
