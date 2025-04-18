@@ -1,17 +1,11 @@
-/*stylesheet fot typing game*/
 @import "tailwindcss";
 
 :root {
     --primary-color: #1c293a;
     --secondary-color: #23354d;
-    --green: #34D399;
-    --orange: #ff9800;
-    --purple: #9c27b0;
-    --red: #f87171
 }
-
 * {
-    font-family: monospace;
+    font-family: 'Fira Code', monospace;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -21,7 +15,6 @@
     font-family: "digital";
     src: url("../police/ds_digital/DS-DIGI.TTF");
 }
-
 @font-face {
     font-family: "quicksand";
     src: url(../Quicksand/static/Quicksand-Medium.ttf);
@@ -31,13 +24,10 @@
     font-family: "digital";
 }
 
-/* ajout */
-/* animation personnalisée */
 @keyframes storyset {
     0% {
         transform: translateY(50px);
     }
-
     100% {
         transform: translateY(10px);
     }
@@ -46,8 +36,6 @@
 .animate-storyset {
     animation: storyset 3s infinite alternate;
 }
-
-/*début*/
 .body {
     margin: 0;
     padding: 0;
@@ -96,35 +84,29 @@
 }
 
 @keyframes words {
-
     0%,
     20% {
-        content: "Tapez plus vite";
+        content: "Taper plus vite";
     }
-
     21%,
     40% {
-        content: "Gagner du temps";
+        content: "gagner du temps";
     }
-
     41%,
     60% {
-        content: "Soyez plus productif";
+        content: "soyer plus productif";
     }
-
     61%,
     80% {
-        content: "Surpassez vos limites";
+        content: "surpasser vos limites";
     }
-
     81%,
     100% {
-        content: "Amusez-vous";
+        content: "amusez-vous";
     }
 }
 
 @keyframes type {
-
     10%,
     15%,
     30%,
@@ -137,7 +119,6 @@
     95% {
         width: 0;
     }
-
     5%,
     20%,
     25%,
@@ -151,27 +132,19 @@
     }
 }
 
-.logo {
-    width: 90px;
-    height: auto;
-}
-
 #header-container {
     display: flex;
     flex-direction: row;
-    padding-left: 20%;
-    gap: 15%;
-}
-#header-container p{
-    font-size: 30px;
-    color: white;
     margin-top: 2%;
-    margin-left: 5%;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 12%;
+    padding-right: 30%;
+    gap: 15%;
 }
 #middle-container {
     width: 100%;
 }
-
 #side-bar {
     width: 5vw;
     height: 100vh;
@@ -181,7 +154,6 @@
     padding-block: 2%;
     background-color: var(--secondary-color);
 }
-
 .icon-nav,
 .icon-nav-off,
 .icon-nav-settings {
@@ -189,40 +161,31 @@
     color: white;
     cursor: pointer;
 }
-
 .icon-nav:hover {
-    color: #00FFFF;
-    transform: scale(1.15);
-    transition: all 0.2s ease-in-out;
+    color: rgb(147, 202, 64);
+    transform: scale(1.1);
 }
-
 .icon-nav-off:hover {
     color: rgb(255, 55, 55);
-    transform: scale(1.15);
-    transition: all 0.2s ease-in-out;
+    transform: scale(1.1);
 }
-
 .icon-nav-settings:hover {
     color: #fbbf24;
-    transform: scale(1.15);
-    transition: all 0.2s ease-in-out;
+    transform: scale(1.1);
 }
 .flex-grow {
     flex-grow: 2;
 }
-
 #nav-bottom-button {
     display: flex;
     flex-direction: column;
     margin-top: 1000%;
 }
-
 #card-container-box {
     padding-inline: 8%;
     padding-block: 3%;
     gap: 5%;
 }
-
 #card-container {
     width: 40vh;
     height: auto;
@@ -230,15 +193,7 @@
     padding-block: 5%;
     background-color: var(--secondary-color);
     border-radius: 12px;
-    border: 1px solid transparent;
-    transition: 0.3s ease-out;
 }
-#card-container:hover{
-    cursor: pointer;
-    transform: scale(1.02);
-    border: 2px solid #00FFFF;
-}
-
 .card-container--items {
     display: flex;
     flex-direction: column;
@@ -246,63 +201,26 @@
     align-items: center;
     width: 100%;
     height: auto;
-    padding-inline: 7%;
+    border-radius: 15px 15px 0px 0px;
     padding-bottom: 5%;
 }
-
-.card-container--element1,
-.card-container--element2,
-.card-container--element3,
-.card-container--element4 {
+.card-container--element {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 85%;
     height: auto;
-    padding-block: 5%;
+    padding-block: 4%;
     margin-inline: 1%;
+    border-bottom: 1px solid whitesmoke;
     background-color: var(--primary-color);
     cursor: pointer;
-    border: 2px solid transparent;
-    border-bottom: 1px solid white;
     transition: transform 0.3s ease-in-out;
 }
-
-.card-container--element1:hover {
-    border-color: var(--green);
+.card-container--element:hover {
+    transform: scale(1.1);
 }
-
-.card-container--element2:hover {
-    border: 2px solid var(--orange);
-}
-
-.card-container--element3:hover {
-    border: 2px solid var(--purple);
-}
-
-.card-container--element4:hover {
-    border: 2px solid var(--red);
-}
-
-.card-container--element1 h1,
-.card-container--element2 h1,
-.card-container--element3 h1,
-.card-container--element4 h1 {
-    font-size: 30px;
-    font-family: 'Fira Code';
-}
-
-.card-container--element1 p,
-.card-container--element2 p,
-.card-container--element3 p,
-.card-container--element4 p {
-    font-size: 18px;
-    font-weight: 100;
-    color: white;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-
 .card-items1,
 .card-items2,
 .card-items3,
@@ -311,38 +229,25 @@
     font-weight: bold;
     text-align: center;
     width: 100%;
-    border-radius: 5px;
+    border-radius: 5px 5px 0px 0px;
 }
-
 .card-items1 {
-    background-color: var(--green);
+    background-color: #4caf50;
 }
-
 .card-items2 {
-    background-color: var(--orange);
+    background-color: #ff9800;
 }
-
 .card-items3 {
-    background-color: var(--purple);
+    background-color: #9c27b0;
 }
-
 .card-items4 {
-    background-color: var(--red);
+    background-color: #f44336;
 }
-
 .card-subtitle {
     font-size: 15px;
     color: #4caf50;
 }
-
-h2 {
-    font-size: 20px;
-}
-
-.card-container--element--exam1,
-.card-container--element--exam2,
-.card-container--element--exam3,
-.card-container--element--exam4 {
+.card-container--element--exam {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -351,55 +256,29 @@ h2 {
     height: auto;
     padding-block: 6%;
     margin-inline: 1%;
+    background-color: #4caf50;
     cursor: pointer;
     border: 3px solid transparent;
     transition: border 0.3s ease-in;
 }
-
-.card-container--element--exam1 {
-    background-color: var(--green);
-}
-
-.card-container--element--exam2 {
-    background-color: var(--orange);
-}
-
-.card-container--element--exam3 {
-    background-color: var(--purple);
-}
-
-.card-container--element--exam4 {
-    background-color: var(--red);
-}
-
-.card-container--element--exam1:hover,
-.card-container--element--exam2:hover,
-.card-container--element--exam3:hover,
-.card-container--element--exam4:hover {
+.card-container--element--exam:hover {
     border-color: white;
 }
 
-.card-container--element--exam h2 {
-    font-size: 20px;
-}
-
 .correct {
-    color: #34d399;
+    color: #34d399; /* vert */
 }
-
 .incorrect {
-    color: #f87171;
+    color: #f87171; /* rouge */
 }
-
 .current {
     text-decoration: underline;
 }
-
 .word {
-    margin-right: 0.5rem;
+    margin-right: 0.5rem; /* ou ce que tu veux */
     display: inline-block;
 }
-
+/* debut */
 
 .icon-nav,
 .icon-nav-off,
@@ -407,4 +286,19 @@ h2 {
     font-size: 2.3rem;
     color: white;
     cursor: pointer;
+}
+.icon-nav:hover {
+    color: #34d399;
+    transform: scale(1.15);
+    transition: all 0.2s ease-in-out;
+}
+.icon-nav-off:hover {
+    color: rgb(255, 55, 55);
+    transform: scale(1.15);
+    transition: all 0.2s ease-in-out;
+}
+.icon-nav-settings:hover {
+    color: #fbbf24;
+    transform: scale(1.15);
+    transition: all 0.2s ease-in-out;
 }

@@ -5,7 +5,7 @@ export const modeSelect = document.getElementById("mode");
 export const wordDisplay = document.getElementById("word-display");
 export const inputField = document.getElementById("input-field");
 
-import { words } from "./ASSETS/js/word.js";
+import { words } from "../js/word.js";
 
 let startTime = null,
     previousEndTime = null;
@@ -205,9 +205,15 @@ next.addEventListener("click", () => {
     inputField.focus();
 });
 
-let dash = document.getElementById("todashboard");
-dash.addEventListener("click", () => {
-    window.location.href = "dashboard.html";
-});
+const dash = document.getElementById("todashboard");
+ dash.addEventListener("click", () => {
+     window.location.href = "dashboard.html";
+ });
 
+
+
+const logout = document.querySelector(".logout");
+logout.addEventListener("click", () => {
+    window.location.href = "../../index.html";
+});
 startTest();

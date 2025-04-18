@@ -1,7 +1,6 @@
-import { inputField, modeSelect, startTest, wordDisplay } from "../../script.js";
+import { inputField, modeSelect, startTest, wordDisplay } from "../js/script.js";
 
 const timeCool = (() => {
-
     const mybtn = document.getElementById("mybtn");
     const timezone = document.getElementById("timezone");
     const timeSelect = document.getElementById("time-select");
@@ -109,5 +108,4 @@ const timeCool = (() => {
     document.addEventListener("keydown", () => {
         if (!timerStarted) launch();
     });
-
 })();
