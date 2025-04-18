@@ -7,7 +7,35 @@ const wpmDisplay = document.querySelector("#wpm-value");
 const accuracyDisplay = document.querySelector("#accuracy-value");
 const timeDisplay = document.querySelector("#time-value");
 
-const targetText = 'fj fj fj fj j fj fj fj j fj fj fj j fj fj fj j fj fj fj fj fj fj fj fj fj j fj j fj fj fj fj fj fj fj fj fj fj fj j fj j fj fj fj fj fj fj fj fj fj j fj j fj fj fj fj';
+/** Adaptation du code aux autres niveaux d'exercices  */
+// Récupérer l'ID du body pour connaître la leçon actuelle
+const lessonId = document.body.id;
+
+// Stockage du contenu pour chaque leçon
+const lessonsContent = {
+    // Level Beginner
+    beginnerLesson1: 'fj fj fj fj j fj fj fj j fj fj fj j fj fj fj j fj fj fj fj fj fj fj j fj fj fj j fj fj fj j fj fj fj j fj fj fj fj fj fj fj j fj fj fj j fj fj fj j fj fj fj j fj fj fj',
+    beginnerLesson2: "a l a l a l a l a l a l a l a l a l a l a l\nal al al al al la la la al al la al",
+    beginnerLesson3: "the cat sat on the mat. the dog ran fast.\ntap the keys with care. feel the rhythm flow.",
+
+    // Level Amateur
+    amateurLesson1: "qwerty qwerty qwerty qwerty qwerty qwerty\nqwe rty wer tyq wer tyq wer tyq",
+    amateurLesson2: "run sun fun bun. top hop pop stop.\nwe go to the park. you can type fast.",
+    amateurLesson3: "Hello, world! Time to code.\nDon't forget: Shift, Alt, and Ctrl are useful keys.",
+
+    // Level Professional
+    professionalLesson1: "Speed comes with time, not haste.\nPrecision is the mark of a master.",
+    professionalLesson2: "The quick brown fox jumps over the lazy dog.\nTyping becomes easier the more you practice.",
+    professionalLesson3: "Price: $5.99 - Discount: 15% off!\nCall us now @ 555-1234 or visit www.example.com.",
+
+    // Top level Jeje's Master
+    jejeMasterLesson1: "Ready, set, go! Type like the wind.\nNo pauses. No breaks. Only speed and focus.",
+    jejeMasterLesson2: "Perfection is not an act, but a habit.\nKeep your fingers steady. Zero errors allowed.",
+    jejeMasterLesson3: "Once upon a time, in a world of code, a typist emerged.\nWrite your own path. Tell your own story. Type freely and fearlessly.",
+};
+
+// Texte à taper selon la leçon
+const targetText = lessonsContent[lessonId];
 
 // Démarrage du chronomètre - setInterval() est une fonction qui exécute une autre toute les X milisecondes 
 function startTimer() {

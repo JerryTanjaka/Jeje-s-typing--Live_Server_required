@@ -24,20 +24,11 @@ body{
     background-color: var(--secondary-color);
 }
 
-.icon-nav,
-.icon-nav-off,
-.icon-nav-settings {
-    font-size: 2rem;
-    color: white;
-    cursor: pointer;
-}
-
 .icon-nav:hover {
     color: #00FFFF;
     transform: scale(1.15);
     transition: all 0.2s ease-in-out;
 }
-
 .icon-nav-off:hover {
     color: rgb(255, 55, 55);
     transform: scale(1.15);
@@ -69,6 +60,11 @@ body{
     width: 100%;
     gap: 8%;
     padding-inline: 10%;
+}
+.exercise-section h1{
+    color: white;
+    font-size: 30px;
+    border: 1px solid white;
 }
 .monitor-container{
     display: flex;
