@@ -7,7 +7,7 @@ const wpmDisplay = document.querySelector("#wpm-value");
 const accuracyDisplay = document.querySelector("#accuracy-value");
 const timeDisplay = document.querySelector("#time-value");
 
-const targetText = 'fj fj fj fj j fj fj fj j fj fj fj j fj fj fj j fj fj fj';
+const targetText = 'fj fj fj fj j fj fj fj j fj fj fj j fj fj fj j fj fj fj fj fj fj fj fj fj j fj j fj fj fj fj fj fj fj fj fj fj fj j fj j fj fj fj fj fj fj fj fj fj j fj j fj fj fj fj';
 
 // Démarrage du chronomètre - setInterval() est une fonction qui exécute une autre toute les X milisecondes 
 function startTimer() {
