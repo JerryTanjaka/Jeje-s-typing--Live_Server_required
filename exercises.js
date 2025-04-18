@@ -89,9 +89,9 @@ document.addEventListener("DOMContentLoaded", function (){
         interval = null;
     
         // Remettre le compteur et les stats à zéro
-        document.getElementById("time-value").textContent = "Time : 0s";
-        document.getElementById("accuracy-value").textContent = "Accuracy : 0%"
-        document.getElementById("wpm-value").textContent = "WPM : 0"
+        document.getElementById("time-value").textContent = "0s";
+        document.getElementById("accuracy-value").textContent = "0%"
+        document.getElementById("wpm-value").textContent = "0"
     
         // Vider le champ de saisie
         document.getElementById("user-input").value = "";
