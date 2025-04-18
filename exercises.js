@@ -76,3 +76,24 @@ document.addEventListener('DOMContentLoaded', () => {
         updateStats();
     });
 }); 
+
+// Redémarrage de tous les compteurs à 0 avec le bouton RESTART
+document.addEventListener("DOMContentLoaded", function (){
+    const restart = document.getElementById("restartButton")
+    restart.addEventListener("click", function (){
+        // Stoppe le timer
+        clearInterval(interval);
+    
+        // Réinitialiser toutes les précédentes valeurs
+        startTime = null;
+        interval = null;
+    
+        // Remettre le compteur et les stats à zéro
+        document.getElementById("time-value").textContent = "Time : 0s";
+        document.getElementById("accuracy-value").textContent = "Accuracy : 0%"
+        document.getElementById("wpm-value").textContent = "WPM : 0"
+    
+        // Vider le champ de saisie
+        document.getElementById("user-input").value = "";
+    })
+})
