@@ -219,10 +219,12 @@ dash.addEventListener("click", () => {
 const logOut = document.getElementById("logOutButton")
 logOut.addEventListener("click", () => {
     window.location.href = "index.html";
-}) 
+})
 
 // Redirection to lesson 1 for beginner (exercise)
-const beginnerLesson1 = document.getElementsByClassName("card-container--element1") 
-beginnerLesson1.addEventListener("click", () => {
-    window.location.href = "./ASSETS/pages/exercises/beginnerLesson1.html"
+document.addEventListener("DOMContentLoaded", function () {
+    const beginnerLesson1 = document.querySelector(".card-container--element1")
+    beginnerLesson1.addEventListener("click", () => {
+        window.location.href = "beginnerLesson1.html"
+    })
 })
