@@ -3,51 +3,58 @@
 :root {
     --primary-color: #1c293a;
     --secondary-color: #23354d;
+    --tiers-color: white;
 }
 /* :root {
     --primary-color: #1e2a3a;
     --secondary-color: #253344;
 }  */
-.default{
+.default {
+    --tiers-color: white;
     --primary-color: #1c293a;
     --secondary-color: #23354d;
 }
 .light {
-    --primary-color: #bbc2c9; 
-    --secondary-color: #28292a; 
+    --secondary-color: #bbc2c9;
+    --primary-color: #28292a;
+    --tiers-color: black;
 }
 
 .dark {
-    --primary-color: #0f172a; 
-    --secondary-color: #1e293b; 
+    --primary-color: #0f172a;
+    --secondary-color: #1e293b;
+    --tiers-color: white;
 }
 
 .emerald {
     --primary-color: #064e3b;
     --secondary-color: #10b981;
+    --tiers-color: white;
 }
 
 .sunset {
     --primary-color: #ff6b6b;
     --secondary-color: #ffe66d;
+    --tiers-color: white;
 }
 
 .ocean {
     --secondary-color: #0077b6;
     --primary-color: #629199;
+    --tiers-color: white;
 }
-
 
 .charcoal {
     --seconadry-color: #2b2d42;
     --primary-color: #636d7e;
+    --tiers-color: white;
 }
 
 .ice {
     --primary-color: #d8f3dc;
     --secondary-color: #52b788;
+    --tiers-color: white;
 }
-
 
 /* Puis tu utilises ces variables dans ton CSS Tailwind avec [style] */
 body {

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" class="bg-[var(--primary-color)] text-white">
+<html lang="en" class="bg-[var(--primary-color)] text-[var(--tiers-color)]">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,11 +15,12 @@
         <script type="module" src="../js/script.js" defer></script>
         <script src="../js/eye.js" defer></script>
         <script type="module" src="../js/time.js" defer></script>
-        <script src="../js/settings.js" defer></script>
+        <script src="../js/song.js" defer></script>
         <script src="../js/theme.js" defer></script>
+        <script src="../js/settings.js" defer></script>
     </head>
-    <body class="max-w-screen">
-        <div class="flex max-w-screen">
+    <body class="max-h-screen max-w-screen overflow-hidden text-[var(--tiers-color)]">
+        <div class="parent flex max-w-screen">
             <nav class="h-screen w-20 bg-[var(--secondary-color)]">
                 <ul class="flex h-full flex-col items-center gap-10 py-8">
                     <li class="cursor-pointer" id="todashboard">
@@ -31,7 +32,7 @@
                     <li class="cursor-pointer">
                         <i class="fa-solid fa-clipboard-list icon-nav text-3xl"></i>
                     </li>
-                    <li class="mt-auto cursor-pointer">
+                    <li class="settingsSelector mt-auto cursor-pointer">
                         <i class="fa-solid fa-gear icon-nav-settings text-3xl"></i>
                     </li>
                     <li class="logout cursor-pointer">
@@ -98,7 +99,7 @@
                     </div>
                     <div class="relative mt-4 line-clamp-6 h-[270px] w-[88vw] overflow-y-hidden scroll-smooth rounded-2xl bg-[var(--secondary-color)] p-8 text-3xl leading-relaxed break-words shadow-lg shadow-black/40 select-none">
                         <div class="message absolute top-20 z-50 flex w-full justify-center opacity-0">Appuyer sur entrer ou espace pour commencer</div>
-                        <div id="word-display" class="h-fit max-h-[170px] text-3xl leading-relaxed break-words select-none"></div>
+                        <div id="word-display" class="h-fit max-h-[170px] text-3xl leading-relaxed break-words select-none text-[var(--tiers-color)]"></div>
                         <input autocomplete="off" id="input-field" type="text" class="absolute top-0 right-0 w-20 rounded-xl border-none bg-neutral-700 px-4 py-3 text-lg text-white opacity-0 focus:ring-2 focus:ring-white/50 focus:outline-none" placeholder="Start typing here..." autofocus />
                     </div>
                     <div class="flex items-center justify-center p-4">
@@ -169,12 +170,14 @@
                 </div>
             </main>
         </div>
-        <div class="flex h-screen bg-[#1e2a3a] text-white">
+        <div class="settings flex h-screen bg-[#1e2a3a] text-white ">
+
+            <button id="exit" class="font-digital absolute top-3 right-10 mx-auto w-fit rounded-lg bg-gray-600 px-4 py-2 text-2xl tracking-widest text-white opacity-0 ring-gray-600 duration-100 hover:scale-105 hover:bg-gray-700 focus:ring-2 focus:ring-offset-2 focus:outline-none active:scale-95">EXIT></button>
             <div class="flex min-h-screen w-screen items-center justify-center bg-[#1e2a3a] p-6 text-white">
                 <div class="w-full max-w-4xl space-y-6">
                     <h1 class="text-center text-2xl font-semibold text-blue-200">Preferences</h1>
-                    <div class="rounded-xl bg-[#253344] p-6">
-                        <h2 class="mb-4 font-medium text-blue-200">Theme</h2>
+                    <div class="rounded-xl bg-[var(--primary-color)] p-6 border-2 border-emerald-700">
+                        <h2 class="mb-4 font-medium text-pink-500">Theme</h2>
                         <div class="flex flex-wrap justify-center gap-8 py-10">
                             <div class="theme-choice space-y-4 text-center" data-theme="default">
                                 <div class="flex h-20 w-28 flex-col justify-between rounded-md bg-sky-900 p-2 shadow-md">
