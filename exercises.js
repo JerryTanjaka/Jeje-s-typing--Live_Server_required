@@ -95,5 +95,8 @@ document.addEventListener("DOMContentLoaded", function (){
     
         // Vider le champ de saisie
         document.getElementById("user-input").value = "";
+
+        // Réinitialiser le texte affiché sans coloration
+        display.innerHTML = targetText.split('').map(char => `<span>${char}</span>`).join('');
     })
 })
