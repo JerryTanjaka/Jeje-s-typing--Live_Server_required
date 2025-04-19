@@ -15,8 +15,8 @@
     --secondary-color: #23354d;
 }
 .light {
-    --primary-color: #bbc2c9;
-    --secondary-color: #28292a;
+    --secondary-color: #1a5570;
+    --primary-color: #28292a;
     --tiers-color: black;
 }
 
@@ -32,11 +32,6 @@
     --tiers-color: white;
 }
 
-.sunset {
-    --primary-color: #ff6b6b;
-    --secondary-color: #ffe66d;
-    --tiers-color: white;
-}
 
 .ocean {
     --secondary-color: #0077b6;
@@ -46,7 +41,7 @@
 
 .charcoal {
     --seconadry-color: #2b2d42;
-    --primary-color: #636d7e;
+    --primary-color: #454a53;
     --tiers-color: white;
 }
 
@@ -56,16 +51,16 @@
     --tiers-color: white;
 }
 
-/* Puis tu utilises ces variables dans ton CSS Tailwind avec [style] */
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
 }
 
 * {
-    font-family: "Fira Code", monospace;
+    font-family: monospace;
     margin: 0;
     padding: 0;
+    font: weight 1px !important;
     box-sizing: border-box;
 }
 
@@ -81,7 +76,9 @@ body {
 .font-digital {
     font-family: "digital";
 }
-
+.tittle{
+    font-family: monospace !important;
+}
 @keyframes storyset {
     0% {
         transform: translateY(50px);
@@ -345,6 +342,6 @@ body {
     color: white;
     cursor: pointer;
 }
-
-
-
+#realbg{
+    background-color: var(--primary-color) !important;
+}

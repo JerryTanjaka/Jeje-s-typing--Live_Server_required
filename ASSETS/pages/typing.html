@@ -23,56 +23,56 @@
     </head>
     <body class="max-h-screen  max-w-screen overflow-hidden text-[var(--tiers-color)]">
         <div class="parent flex max-w-screen">
-            <nav class="h-screen min-w-[80px]  max-w-[80px] bg-[var(--secondary-color)]">
+            <nav class="h-screen min-w-[80px]  max-w-[80px] bg-[var(--primary-color)] ">
                 <ul class="flex h-full flex-col items-center gap-10 py-8">
                     <li class="cursor-pointer" id="todashboard">
-                        <i class="fa-solid fa-graduation-cap icon-nav text-3xl"></i>
+                        <i class="fa-solid  fa-graduation-cap icon-nav text-3xl "></i>
                     </li>
                     <li class="cursor-pointer" id="typing">
-                        <i class="fa-solid fa-font icon-nav  text-3xl"></i>
+                        <i class="fa-solid  fa-font icon-nav  text-3xl"></i>
                     </li>
                     <li class="cursor-pointer">
-                        <i class="fa-solid fa-clipboard-list icon-nav text-3xl"></i>
+                        <i class="fa-solid  fa-clipboard-list icon-nav text-3xl"></i>
                     </li>
                     <li class="mt-auto cursor-pointer "id="info">
-                        <i class="fa-solid fa-circle-info icon-nav  text-3xl"></i>
+                        <i class="fa-solid  fa-circle-info icon-nav  text-3xl"></i>
                     </li>
                     <li class="settingsSelector  cursor-pointer">
-                        <i class="fa-solid fa-gear text-3xl icon-nav-settings"></i>
+                        <i class="fa-solid  fa-gear text-3xl icon-nav-settings"></i>
                     </li>
                     <li class="logout cursor-pointer">
-                        <i class="fa-solid fa-power-off icon-nav-off text-3xl"></i>
+                        <i class="fa-solid  fa-power-off icon-nav-off text-3xl"></i>
                     </li>
                 </ul>
             </nav>
-            <main class="flex min-h-screen w-screen flex-col items-center bg-[var(--primary-color)] bg-cover bg-center">
-                <div class="flex h-fit self-start rounded-full px-2.5">
+            <main class="flex min-h-screen w-screen flex-col items-center bg-[var(--secondary-color)] bg-cover bg-center">
+                <div class="flex tittle h-fit self-start rounded-full px-2.5">
                     <div class="ml-5 w-14">
                         <img src="../Photos/logo/dark.png" alt="" />
                     </div>
-                    <h2 class="flex items-center space-x-4 text-4xl font-semibold tracking-tight">
+                    <h2 class="flex ml-5 mt-2 space-x-5 items-center mb-12  text-3xl font-semibold tracking-tight">
                         <span
                             >JE<span class="text-emerald-400">JE'<span class="text-white">S</span></span></span
                         >
                         <span class="text-emerald-400">TYPING</span>
                     </h2>
                 </div>
-                <div class="flex min-h-[90vh] w-full max-w-4xl flex-col items-center text-center">
+                <div class="flex min-h-[90vh] w-full max-w-4xl flex-col  items-center text-center ">
                     <div class="mb-2 flex w-full items-center justify-between">
-                        <div class="  flex items-center gap-4 ">
-                            <label for="mode" class="font-digital text-2xl font-medium tracking-widest text-white uppercase">difficulty:</label>
-                            <select id="mode" class="block w-full rounded-lg border-2 p-2 text-xl focus:border-blue-500 focus:ring-blue-500">
-                                <option value="easy"><p class="border-8 text-red-900">😁 Easy</p></option>
-                                <option value="medium">😐 Medium</option>
-                                <option value="hard">😡 Hard</option>
+                        <div class="  flex items-center gap-4 bg-[var(--primary-color)] rounded-2xl ">
+                            <label for="mode" class="font-digital text-2xl font-medium tracking-widest text-white uppercase pl-4 py-4">difficulty:</label>
+                            <select id="mode" class="block w-full rounded-lg bg-[var(--secondary-color)] border-2 p-2 text-xl focus:border-blue-500 focus:ring-blue-500">
+                                <option value="easy"><p class="border-8 text-red-900"> Easy</p></option>
+                                <option value="medium"> Medium</option>
+                                <option value="hard"> Hard</option>
                             </select>
                         </div>
-                        <div class=" flex items-center gap-4">
+                        <div class=" flex items-center gap-4  bg-[var(--primary-color)] rounded-2xl pl-10 py-1.5">
                             <label for="time-select" class="font-digital text-2xl font-medium tracking-widest text-white uppercase">time:</label>
-                            <select id="time-select" class="block w-full rounded-lg border-2 p-2 text-xl focus:border-blue-500 focus:ring-blue-500">
-                                <option value="15">⏱️ 15 s</option>
-                                <option value="30">⏱️ 30 s</option>
-                                <option value="60">⏱️ 60 s</option>
+                            <select id="time-select" class="block w-full bg-[var(--secondary-color)] rounded-lg border-2 p-2 text-xl focus:border-blue-500 focus:ring-blue-500">
+                                <option value="15"> 15 s</option>
+                                <option value="30"> 30 s</option>
+                                <option value="60"> 60 s</option>
                                 <option value="infinite">♾️</option>
                             </select>
                         </div>
@@ -85,7 +85,7 @@
                             <button id="mybtn" class="font-digital mx-auto w-fit rounded-lg bg-emerald-600 px-4 py-2 text-2xl tracking-widest text-white ring-emerald-600 duration-100 hover:scale-105 hover:bg-emerald-700 focus:ring-2 focus:ring-offset-2 focus:outline-none active:scale-95" tabindex="0">NEXT></button>
                         </div>
                     </div>
-                    <div class="grid max-h-[150px] w-full min-w-[60vw] grid-cols-3 rounded-2xl border-2 border-emerald-400 bg-[var(--secondary-color)] p-2 ring-1">
+                    <div class="grid  bg-red-500 max-h-[150px] w-full min-w-[60vw] grid-cols-3 rounded-2xl border-2 border-emerald-400  p-2 ring-1" id="realbg">
                         <div class="flex w-56 flex-col items-center">
                             <img class="max-w-[50px] self-center" src="../Photos/abc-svgrepo-com.png" alt="" />
                             <p id="wpm-result" class="mt-2 text-3xl text-white"></p>
@@ -101,8 +101,8 @@
                             <p id="wpm-result" class="mt-2 text-xl text-white">Accuracy</p>
                         </div>
                     </div>
-                    <input autocomplete="off" id="input-field" type="text" class="absolute top-0 right-0 w-20 rounded-xl border-none bg-neutral-700 px-4 py-3 text-lg text-white opacity-0 focus:ring-2 focus:ring-white/50 focus:outline-none" placeholder="Start typing here..." autofocus />
-                    <div class="relative mt-4 line-clamp-6 flex h-[270px] w-[88vw] flex-col items-center overflow-y-hidden scroll-smooth rounded-2xl bg-[var(--secondary-color)] p-8 text-3xl leading-relaxed break-words shadow-lg shadow-black/40 select-none">
+                    <input autocomplete="off" id="input-field" type="text" class="absolute top-0 right-0 w-20 rounded-xl border-none bg-neutral-700 px-4 py-3 text-lg opacity-0 focus:ring-2 focus:ring-white/50 focus:outline-none" placeholder="Start typing here..." autofocus />
+                    <div class="relative mt-4 line-clamp-6 flex h-[270px] w-[88vw] flex-col items-center overflow-y-hidden scroll-smooth rounded-2xl text-[var(--tiers-color)] bg-[var(--primary-color)] p-8 text-3xl leading-relaxed break-words shadow-lg shadow-black/40 select-none">
                         <div class="message absolute top-20 z-50 flex w-4xl justify-center rounded-3xl px-16 py-3 opacity-0">Appuyer sur<span class="px-4 font-extrabold uppercase underline">entrer</span> pour commencer</div>
                         <div id="word-display" class="h-fit max-h-[170px] text-3xl leading-relaxed break-words text-[var(--tiers-color)] select-none"></div>
                     </div>
@@ -212,7 +212,7 @@
                                         <div class="h-10 w-3 rounded bg-gray-200"></div>
                                     </div>
                                 </div>
-                                <button id="light" class="theme-btn rounded-md bg-gray-100 px-4 py-1 text-sm text-black hover:bg-gray-200 focus:ring-2 focus:ring-gray-300 focus:outline-none">Light</button>
+                                <button id="light" class="theme-btn rounded-md bg-gray-100 px-4 py-1 text-sm text-black hover:bg-gray-200 focus:ring-2 focus:ring-gray-300 focus:outline-none">Moca</button>
                             </div>
                             <div class="theme-choice space-y-4 text-center" data-theme="dark">
                                 <div class="flex h-20 w-28 flex-col justify-between rounded-md bg-[#0f172a] p-2 shadow-md">
@@ -302,7 +302,7 @@
                 </div>
             </div>
             <audio id="backgroundMusic" loop>
-                <source src="../song/lofi.mp3" type="audio/mpeg" />
+                <source src="../song/lofisite.mp3" type="audio/mpeg" />
                 Ton navigateur ne supporte pas l'audio.
             </audio>
         </div>

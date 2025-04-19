@@ -263,14 +263,12 @@ function applyThemeFromLocalStorage() {
         document.documentElement.className = savedTheme;
     }
 }             
-window.onload = applyThemeFromLocalStorage;const buttons = document.querySelectorAll(".theme-btn");
-
-buttons.forEach((button) => {
+window.onload = applyThemeFromLocalStorage;const buttonstheme = document.querySelectorAll(".theme-btn");
+buttonstheme.forEach((button) => {
     button.addEventListener("click", (event) => {
         const theme = event.target.id;
         document.documentElement.className = theme;
         localStorage.setItem("theme", theme);
-
         localStorage.setItem("preferredLanguage", languageSelect.value);
         startTest();
         applyBlur();
