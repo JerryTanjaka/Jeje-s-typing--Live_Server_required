@@ -10,8 +10,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
 
-    <body class="flex h-screen">
-        <div class="absolute bottom-4 left-4">
+    <body class="flex h-screen max-lg:block">
+        <div class="absolute bottom-4 left-4 hidden">
             <span class="sm:hidden">XS</span>
             <span class="hidden sm:block md:hidden">SM</span>
             <span class="hidden md:block lg:hidden">MD</span>
@@ -19,7 +19,7 @@
             <span class="hidden xl:block 2xl:hidden">XL</span>
         </div>
         <!-- Partie gauche -->
-        <div class="flex w-1/2 flex-col items-center justify-around bg-gray-800 p-12 shadow-2xl">
+        <div class="flex w-1/2 max-lg:w-screen flex-col  items-center justify-around bg-gray-800 p-12 shadow-2xl">
             <div>
                 <h1 class="reveal mb-8 text-center text-4xl font-bold"><span>B</span><span>i</span><span>e</span><span>n</span><span>v</span><span>e</span><span>n</span><span>u</span><span>e</span> <span></span><span>s</span><span>u</span><span>r</span></h1>
                 <h2 class="reveal flex items-center space-x-4 text-4xl font-semibold tracking-tight">
@@ -58,7 +58,7 @@
         </div>
 
         <!-- Partie droite -->
-        <div class="flex w-1/2 flex-col items-center justify-center space-y-8 bg-gray-900">
+        <div class="flex w-1/2 max-lg:w-screen flex-col items-center justify-center space-y-8 bg-gray-900">
             <img src="ASSETS/photo/Typing.gif" alt="Clavier" class="animate-storyset mt-16 max-w-[60%] rounded-2xl shadow-lg shadow-emerald-500/30 transition duration-500 hover:scale-105" />
             <div class="body">
                 <div class="animated-text"><span></span></div>

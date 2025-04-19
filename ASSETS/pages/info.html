@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carousel simple avec JS</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link rel="stylesheet" href="../../output.css" />
+    <link rel="stylesheet" href="../CSS/input.css">
+    <link rel="stylesheet" href="../CSS/info.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="../js/redirection.js"defer></script>
+    <script src="../js/info.js" defer></script>
+</head>
+<body class="bg-[var(--primary-color)] text-[var(--tiers-color)] overflow-hidden flex">
+        <nav class="h-screen min-w-[80px]  max-w-[80px] bg-[var(--secondary-color)]">
+            <ul class="flex h-full flex-col items-center gap-10 py-8">
+                <li class="cursor-pointer" id="todashboard">
+                    <i class="fa-solid fa-graduation-cap icon-nav text-3xl"></i>
+                </li>
+                <li class="cursor-pointer" id="typing">
+                    <i class="fa-solid fa-font icon-nav  text-3xl"></i>
+                </li>
+            
+                <li class="mt-auto cursor-pointer "id="info">
+                    <i class="fa-solid fa-circle-info icon-nav  text-3xl"></i>
+                </li>
+            
+                <li class="logout cursor-pointer">
+                    <i class="fa-solid fa-power-off icon-nav-off text-3xl"></i>
+                </li>
+            </ul>
+        </nav>
+
+    <!-- Main Content -->
+    <div class="flex-1 p-8">
+        <!-- Carousel Section -->
+        <div class="carousel-container relative w-full max-w-5xl bg-[var(--secondary-color)] mx-auto">
+            <div class="carousel-items h-[80vh] flex" id="carousel">
+                <div class="carousel-item h-full flex items-center justify-center">
+                    <img src="../photo/picsay.png" alt="Posture" class="h-full object-cover" />
+                </div>
+                <div class="carousel-item h-full flex items-center justify-center">
+                    <img src="../photo/touch.png" alt="Posture" class="h-full object-cover" />
+                </div>
+                <div class="carousel-item h-full flex items-center justify-center bg-var[var(--secondary-color)]">
+                    <span class="animate-pulse bg-gradient-to-r from-pink-500 to-purple-600 bg-clip-text text-7xl font-extrabold text-transparent">
+                        Enjoy the game
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Carousel Controls -->
+        <div class="flex gap-4 justify-center mt-4">
+            <button id="prev" class="rounded bg-gray-500 px-4 py-2 text-white transition hover:bg-gray-700">Prev</button>
+            <button id="next" class="rounded bg-gray-500 px-4 py-2 text-white transition hover:bg-gray-700">Next</button>
+        </div>
+    </div>
+
+</body>
+</html>

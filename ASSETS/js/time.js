@@ -1,10 +1,11 @@
-import { inputField, modeSelect, startTest, wordDisplay } from "../js/script.js";
+import { inputField, modeSelect, startTest, wordDisplay } from "./script.js";
+
+export const message = document.getElementsByClassName("message")[0];
 
 const timeCool = (() => {
     const mybtn = document.getElementById("mybtn");
     const timezone = document.getElementById("timezone");
     const timeSelect = document.getElementById("time-select");
-    const message = document.getElementsByClassName("message")[0];
 
     let interval;
     let secondes = 0;
@@ -15,16 +16,15 @@ const timeCool = (() => {
     const applyBlur = () => {
         wordDisplay.classList.add("blur-md");
         blured = true;
-        message.classList.add("bg-red-500");
+        message.classList.add("bg-sky-700");
         message.classList.remove("opacity-0");
     };
-
     const removeBlur = () => {
         wordDisplay.classList.remove("blur-md");
         blured = false;
-        message.classList.remove("bg-red-500");
+        message.classList.remove("bg-sky-700");
         message.classList.add("opacity-0");
-        inputField.focus(); // 👉 maintenant ici
+        inputField.focus();
     };
 
     const handleSelectClick = () => {
@@ -37,10 +37,7 @@ const timeCool = (() => {
 
     const handleSelectChange = () => {
         stopTimer();
-
-        // Appliquer le flou, mais ne pas encore focus
         applyBlur();
-
         isInfinite = timeSelect.value === "infinite";
         secondes = isInfinite ? 0 : parseInt(timeSelect.value);
         timezone.textContent = isInfinite ? "∞" : secondes;
@@ -50,9 +47,9 @@ const timeCool = (() => {
     modeSelect.addEventListener("change", handleSelectChange);
 
     document.addEventListener("keydown", (e) => {
-        if (blured && (e.key === "Enter" || e.key === " ")) {
+        if (blured && (e.key === "Enter")) {
+            removeBlur();
             startTest();
-            removeBlur(); // 👉 supprime le blur et fait le focus
         }
     });
 
@@ -65,6 +62,7 @@ const timeCool = (() => {
     const stopTimer = () => {
         clearInterval(interval);
         timerStarted = false;
+
     };
 
     const decompte = () => {
@@ -74,6 +72,8 @@ const timeCool = (() => {
                 timezone.textContent = secondes;
             } else {
                 stopTimer();
+                applyBlur();
+
                 timezone.textContent = "⌛ Temps écoulé !";
                 timezone.classList.add("text-red-700", "font-bold", "animate-pulse", "text-[2.4rem]", "uppercase");
                 const inputField = document.getElementById("input-field");

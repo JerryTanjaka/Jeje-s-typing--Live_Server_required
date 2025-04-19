@@ -4,9 +4,25 @@
 export const modeSelect = document.getElementById("mode");
 export const wordDisplay = document.getElementById("word-display");
 export const inputField = document.getElementById("input-field");
+const languageSelect = document.getElementById("languageSelect");
+const message = document.getElementsByClassName("message")[0];
+import { wordsEng, wordsFr, wordsMlg } from "./word.js";
 
-import { words } from "../js/word.js";
+let blured = false;
 
+const applyBlur = () => {
+        wordDisplay.classList.add("blur-md");
+        blured = true;
+        message.classList.add("bg-sky-500");
+        message.classList.remove("opacity-0");
+    };
+    const removeBlur = () => {
+        wordDisplay.classList.remove("blur-md");
+        blured = false;
+        message.classList.remove("bg-sky-500");
+        message.classList.add("opacity-0");
+        inputField.focus();
+    };
 let startTime = null,
     previousEndTime = null;
 let currentWordIndex = 0;
@@ -20,13 +36,19 @@ const accuracyResult = document.getElementById("accuracy-result");
 const next = document.getElementById("mybtn");
 // Générer un mot aléatoire
 const getRandomWord = (mode) => {
-    const wordList = words[mode];
+    let wordList = [];
+    if (languageSelect.value === "FR") {
+        wordList = wordsFr[mode];
+    } else if (languageSelect.value === "ENG") {
+        wordList = wordsEng[mode];
+    } else if (languageSelect.value === "MLG") {
+        wordList = wordsMlg[mode];
+    }
     return wordList[Math.floor(Math.random() * wordList.length)];
 };
 
 // Initialiser le test
 export const startTest = (wordCount = 105) => {
-    inputField.focus();
     wordsToType.length = 0;
     wordDisplay.innerHTML = "";
     currentWordIndex = 0;
@@ -58,6 +80,8 @@ export const startTest = (wordCount = 105) => {
     wpmResult.textContent = "0";
     accuracyResult.textContent = "0%";
     highlightNextWord();
+    inputField.focus();
+
 };
 
 // Coloration des lettres en temps réel
@@ -120,6 +144,8 @@ const getCurrentStats = () => {
             }
         };
         document.addEventListener("keydown", handleEnter);
+        inputField.focus();
+
     }
 
     const wordChars = Math.max(typedWord.length, targetWord.length);
@@ -195,6 +221,7 @@ inputField.addEventListener("input", () => {
 
 inputField.addEventListener("keydown", updateWord);
 modeSelect.addEventListener("change", () => {
+    localStorage.setItem("preferredMode", modeSelect.value);
     startTest();
     inputField.focus();
 });
@@ -205,18 +232,45 @@ next.addEventListener("click", () => {
     inputField.focus();
 });
 
-const dash = document.getElementById("todashboard");
-dash.addEventListener("click", () => {
-    window.location.href = "dashboard.html";
+languageSelect.addEventListener("change", () => {
+    localStorage.setItem("preferredLanguage", languageSelect.value);
+    startTest();
+    applyBlur();
 });
 
-const logout = document.querySelector(".logout");
-logout.addEventListener("click", () => {
-    window.location.href = "../../index.html";
+window.addEventListener("DOMContentLoaded", () => {
+    const savedLanguage = localStorage.getItem("preferredLanguage");
+    const savedMode = localStorage.getItem("preferredMode");
+
+    if (savedLanguage) {
+        languageSelect.value = savedLanguage;
+    }
+    if (savedMode) {
+        modeSelect.value = savedMode;
+    }
+    startTest();
 });
-
-
-const settings = document.querySelector(".settings");
-settings.addEventListener("click", () => {
-    window.location.href = "../../index.html";
-});startTest();
+document.addEventListener("keydown", (e) => {
+    if (blured && (e.key === "Enter")) {
+        startTest();
+        removeBlur();
+    }
+});
+// theme
+function applyThemeFromLocalStorage() {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+        document.documentElement.className = savedTheme;
+    }
+}             
+window.onload = applyThemeFromLocalStorage;const buttonstheme = document.querySelectorAll(".theme-btn");
+buttonstheme.forEach((button) => {
+    button.addEventListener("click", (event) => {
+        const theme = event.target.id;
+        document.documentElement.className = theme;
+        localStorage.setItem("theme", theme);
+        localStorage.setItem("preferredLanguage", languageSelect.value);
+        startTest();
+        applyBlur();
+    });
+});
