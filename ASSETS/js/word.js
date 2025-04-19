@@ -92,14 +92,18 @@ export const wordsEng = {
       "sotro", "vilia", "sary hosodoko", "jiro", "fitaratra", "tafontrano", "lapan'ny mpanjaka", "soavaly", "bisikileta", "motera"
     ],
     hard: [
-      "tsyazom-pahazoana", "fampitandremana", "fandikana", "fahaverezan-kevitra", "fandrosoana", "fanovàna", "fampisehoana", "fahaleovan-tena", "fahazakana", "anarana sandoka",
-      "finoana", "rafitra fototra", "fandalinana lalina", "fihaonana tsy ampoizina", "fifanarahana ara-potoana", "fitsidihana indray", "herinaratra", "tsyara-dalàna", "fampitambarana sehatra", "zava-misy ankehitriny",
-      "toe-karena sy sosialy", "fitondrana iraisam-pirenena", "efamira mitovy", "mpandraharaha", "fikarakarana tontolo iainana", "famindrana antontan-taratasy", "fifanarahana", "fanaovana virtoaly", "fisaraham-bazana", "hevi-dalina",
-      "fanandramana", "fametrahana", "fametrahana amin'ny toe-javatra", "famotsorana", "mpisitraka", "voka-dratsy", "fanaiky", "tsy mifanaraka amin'ny lalàmpanorenana", "fandaminana ambony", "endrika fototra",
-      "fanafihana miverina", "fisaraham-bazana tanteraka", "famerenana amin'ny toe-javatra", "lafiny maro", "fanombanana tena", "teny momba ny fiteny", "fitaovana mamonjy aina", "hypothalamus", "fandalinana hormonina", "fiteny sy atidoha",
-      "hafanana sy angovo", "mikroelektronika", "herinaratra avy amin'ny rano", "zavamaniry mampihodina angovo", "fahaiza-mamorona", "fahaizana mandray hevitra", "aretina ara-batana sy ara-tsaina", "fitsipi-pitondrantena", "mahagaga", "fanovàna lehibe",
-      "fahatairana", "vato misintona", "voan'ny herinaratra", "tsy azo averina", "mahery fo", "mpikaroka arkeolojika", "fianarana fiteny", "saina diso", "ahiahiana", "mampiahiahy",
-      "loza mitatao", "toetra manokana", "feon'ny natiora", "famerenana fijery", "fanitsiana tena", "fijerena anaty", "fifandraisana anatiny", "fandaminana loatra", "fahavitrihana roa", "fampihatra demaokrasia"
+      "tsyazom-pahazoana", "fampitandremana", "fandikana", "fahaverezan-kevitra", "fandrosoana", "fanovàna", "fampisehoana", "fahaleovan-tena", "fahazakana", "anarana-sandoka",
+      "finoana", "rafitra-fototra", "fandalinana-lalina", "fihaonana-tsy-ampoizina", "fifanarahana-ara-potoana", "fitsidihana-indray", "herinaratra", "tsyara-dalàna", "fampitambarana", "zava-misy",
+      "toe-karena", "fitondrana-iraisam-pirenena", "efamira-mitovy", "mpandraharaha", "fikarakarana-tontolo-iainana", "famindrana-antontan-taratasy", "fifanarahana", "fanaovana-virtoaly", "fisaraham-bazana", "hevi-dalina",
+      "fanandramana", "fametrahana", "fametrahana-toe-javatra", "famotsorana", "mpisitraka", "voka-dratsy", "fanaiky", "tsy-mifanaraka-lalàmpanorenana", "fandaminana-ambony", "endrika-fototra",
+      "fanafihana-miverina", "fisaraham-bazana-tanteraka", "famerenana-toe-javatra", "lafiny-maro", "fanombanana-tena", "teny-momba-fiteny", "fitaovana-mamonjy-aina", "hypothalamus", "fandalinana-hormonina", "fiteny-sy-atidoha",
+      "hafanana-sy-angovo", "mikroelektronika", "herinaratra-rano", "zavamaniry", "fahaiza-mamorona", "fahaizana-mandray-hevitra", "aretina-ara-batana-sy-tsaina", "fitsipi-pitondrantena", "mahagaga", "fanovàna-lehibe",
+      "fahatairana", "vato-misintona", "voan'ny-herinaratra", "tsy-azo-averina", "mahery-fo", "mpikaroka-arkeolojika", "fianarana-fiteny", "saina-diso", "ahiahiana", "mampiahiahy",
+      "loza-mitatao", "toetra-manokana", "feon'ny-natiora", "famerenana-fijery", "fanitsiana-tena", "fijerena-anaty", "fifandraisana-anatiny", "fandaminana-loatra", "fahavitrihana-roa", "fampihatra-demaokrasia",
+      "fampianarana-lalina", "fahendrena", "fampifangaroana", "fanofanana", "fampihavanana", "sainam-pirenena", "fampielezan-kevitra", "mpianatra", "fandrosoana-ara-tsaina", "fihetseham-po",
+      "fitsarana", "zavatra-sarotra", "samy hafa", "fampivoarana", "fahombiazana", "fambolena-maoderina", "toetra-tsy-mitovy", "fanaovana-kajy", "fanadihadiana", "fampiharana",
+      "fahaiza-manao", "fampifandraisana", "zava-baovao", "fanombanana", "fahasalamana", "fampitàna", "fampanantenana", "fitsipika"
     ]
+    
   };
   

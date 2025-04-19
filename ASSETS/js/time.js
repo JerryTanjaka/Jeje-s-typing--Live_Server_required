@@ -16,13 +16,13 @@ const timeCool = (() => {
     const applyBlur = () => {
         wordDisplay.classList.add("blur-md");
         blured = true;
-        message.classList.add("bg-red-500");
+        message.classList.add("bg-sky-700");
         message.classList.remove("opacity-0");
     };
     const removeBlur = () => {
         wordDisplay.classList.remove("blur-md");
         blured = false;
-        message.classList.remove("bg-red-500");
+        message.classList.remove("bg-sky-700");
         message.classList.add("opacity-0");
         inputField.focus();
     };
@@ -47,9 +47,9 @@ const timeCool = (() => {
     modeSelect.addEventListener("change", handleSelectChange);
 
     document.addEventListener("keydown", (e) => {
-        if (blured && (e.key === "Enter" || e.key === " ")) {
-            startTest();
+        if (blured && (e.key === "Enter")) {
             removeBlur();
+            startTest();
         }
     });
 
