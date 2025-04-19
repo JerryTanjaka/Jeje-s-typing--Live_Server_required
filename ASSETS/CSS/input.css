@@ -220,7 +220,7 @@ body {
     cursor: pointer;
 }
 .icon-nav:hover {
-    color: rgb(147, 202, 64);
+    color:#00FFFF;
     transform: scale(1.1);
 }
 .icon-nav-off:hover {
@@ -345,18 +345,6 @@ body {
     color: white;
     cursor: pointer;
 }
-.icon-nav:hover {
-    color: #34d399;
-    transform: scale(1.15);
-    transition: all 0.2s ease-in-out;
-}
-.icon-nav-off:hover {
-    color: rgb(255, 55, 55);
-    transform: scale(1.15);
-    transition: all 0.2s ease-in-out;
-}
-.icon-nav-settings:hover {
-    color: #fbbf24;
-    transform: scale(1.15);
-    transition: all 0.2s ease-in-out;
+.classSelect{
+    color : black;
 }

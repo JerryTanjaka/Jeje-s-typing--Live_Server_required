@@ -1,17 +1,30 @@
+window.addEventListener("DOMContentLoaded", () => {
+    const logout = document.querySelector(".logout");
+    const info = document.getElementById("info");
+    const lesson1 = document.querySelector(".lesson1");
+    const dash = document.getElementById("todashboard");
 
-const lesson1 = document.querySelector(".lesson1");
-lesson1.addEventListener("click", () => {
-    window.location.href = "exo/lesson1.html";
-});
+    if (lesson1) {
+        lesson1.addEventListener("click", () => {
+            window.location.href = "exo/lesson1.html";
+        });
+    }
 
-const dash = document.getElementById("todashboard");
- dash.addEventListener("click", () => {
-     window.location.href = "dashboard.html";
- });
+    if (dash) {
+        dash.addEventListener("click", () => {
+            window.location.href = "dashboard.html";
+        });
+    }
 
+    if (logout) {
+        logout.addEventListener("click", () => {
+            window.location.href = "../../index.html";
+        });
+    }
 
-
-const logout = document.querySelector(".logout");
-logout.addEventListener("click", () => {
-    window.location.href = "../../index.html";
+    if (info) {
+        info.addEventListener("click", () => {
+            window.location.href = "info.html";
+        });
+    }
 });

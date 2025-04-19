@@ -10,7 +10,6 @@
         <link rel="stylesheet" href="../CSS/input.css" />
         <script src="https://cdn.tailwindcss.com"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <script src="../CSS/settings.css"></script>
         <script src="../js/keyboard.js" defer></script>
         <script type="module" src="../js/script.js" defer></script>
         <script src="../js/eye.js" defer></script>
@@ -19,6 +18,7 @@
         <script src="../js/theme.js" defer></script>
         <script src="../js/settings.js" defer></script>
         <script src="../js/time.js" defer></script>
+        <script src="../js/redirection.js"defer></script>
     </head>
     <body class="max-h-screen  max-w-screen overflow-hidden text-[var(--tiers-color)]">
         <div class="parent flex max-w-screen">
@@ -28,17 +28,16 @@
                         <i class="fa-solid fa-graduation-cap icon-nav text-3xl"></i>
                     </li>
                     <li class="cursor-pointer">
-                        <i class="fa-solid fa-font icon-nav text-3xl"></i>
+                        <i class="fa-solid fa-font icon-nav  text-3xl"></i>
                     </li>
                     <li class="cursor-pointer">
                         <i class="fa-solid fa-clipboard-list icon-nav text-3xl"></i>
                     </li>
-
-                    <li class=" mt-auto cursor-pointer">
-                        <i class="fa-solid fa-circle-info icon-nav text-3xl"></i>
+                    <li class="mt-auto cursor-pointer "id="info">
+                        <i class="fa-solid fa-circle-info icon-nav  text-3xl"></i>
                     </li>
-                    <li class="settingsSelector cursor-pointer">
-                        <i class="fa-solid fa-gear icon-nav-settings text-3xl"></i>
+                    <li class="settingsSelector  cursor-pointer">
+                        <i class="fa-solid fa-gear text-3xl icon-nav-settings"></i>
                     </li>
                     <li class="logout cursor-pointer">
                         <i class="fa-solid fa-power-off icon-nav-off text-3xl"></i>
@@ -59,7 +58,7 @@
                 </div>
                 <div class="flex min-h-[90vh] w-full max-w-4xl flex-col items-center text-center">
                     <div class="mb-2 flex w-full items-center justify-between">
-                        <div class="flex items-center gap-4">
+                        <div class="classSelect flex items-center gap-4">
                             <label for="mode" class="font-digital text-2xl font-medium tracking-widest text-white uppercase">difficulty:</label>
                             <select id="mode" class="block w-full rounded-lg border-2 p-2 text-xl focus:border-blue-500 focus:ring-blue-500">
                                 <option value="easy"><p class="border-8 text-red-900">😁 Easy</p></option>
@@ -67,7 +66,7 @@
                                 <option value="hard">😡 Hard</option>
                             </select>
                         </div>
-                        <div class="flex items-center gap-4">
+                        <div class="classSelect flex items-center gap-4">
                             <label for="time-select" class="font-digital text-2xl font-medium tracking-widest text-white uppercase">time:</label>
                             <select id="time-select" class="block w-full rounded-lg border-2 p-2 text-xl focus:border-blue-500 focus:ring-blue-500">
                                 <option value="15">⏱️ 15 s</option>

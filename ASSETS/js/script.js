@@ -231,16 +231,6 @@ next.addEventListener("click", () => {
     inputField.focus();
 });
 
-const dash = document.getElementById("todashboard");
-dash.addEventListener("click", () => {
-    window.location.href = "dashboard.html";
-});
-
-const logout = document.querySelector(".logout");
-logout.addEventListener("click", () => {
-    window.location.href = "../../index.html";
-});
-
 languageSelect.addEventListener("change", () => {
     localStorage.setItem("preferredLanguage", languageSelect.value);
     startTest();
