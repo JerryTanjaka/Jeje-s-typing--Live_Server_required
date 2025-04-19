@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carousel simple avec JS</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../../output.css" />
+  <link rel="stylesheet" href="../CSS/input.css" />
+  <style>
+    .carousel-items {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .carousel-item {
+      min-width: 100%;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: bold;
+      color: white;
+      height: 450px;
+      border-radius: 20px;
+    }
+
+    .carousel-container {
+      overflow: hidden;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      padding: 8px;
+    }
+  </style>
+</head>
+<body class="bg-[var(--primary-color)] min-h-screen flex flex-col items-center justify-center gap-6">
+
+  <div class="max-w-5xl w-full bg-[var(--secondary-color)] carousel-container relative">
+    <div class="carousel-items h-[80vh]" id="carousel">
+      <div class="carousel-item h-full ">
+        <img src="../photo/posture.png" alt="Posture" class="h-full">
+      </div>
+      <div class="carousel-item h-full ">
+        Slide 2
+      </div>
+      <div class="carousel-item h-full ">
+        Slide 3
+      </div>
+      <div class="carousel-item h-full bg-yellow-500">
+        Slide 4
+      </div>
+    </div>
+  </div>
+
+  <div class="flex gap-4">
+    <button id="prev" class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition">Prev</button>
+    <button id="next" class="bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition">Next</button>
+  </div>
+
+  <script>
+    const carousel = document.getElementById('carousel');
+    const totalSlides = carousel.children.length;
+    let currentSlide = 0;
+
+    function updateCarousel() {
+      const offset = -currentSlide * 100;
+      carousel.style.transform = `translateX(${offset}%)`;
+    }
+
+    document.getElementById('next').addEventListener('click', () => {
+      currentSlide = (currentSlide + 1) % totalSlides;
+      updateCarousel();
+    });
+
+    document.getElementById('prev').addEventListener('click', () => {
+      currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+      updateCarousel();
+    });
+  </script>
+
+</body>
+</html>
