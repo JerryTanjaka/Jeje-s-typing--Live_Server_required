@@ -107,3 +107,26 @@ export const wordsEng = {
     
   };
   
+
+
+export const lessonsContent = {
+  // Level Beginner
+  beginnerLesson1: 'fj fj fj fj j fj fj fj j fj fj fj j fj fj fj j fj fj fj fj fj fj fj j fj fj fj j fj fj fj j fj fj fj j fj fj fj fj fj fj fj j fj fj fj j fj fj fj j fj fj fj j fj fj fj',
+  beginnerLesson2: "a l a l a l a l a l a l a l a l a l a l a l\nal al al al al la la la al al la al a l a l a l\nal al al al al la la la al al la al a l a l a l\nal al al al al la la la al",
+  beginnerLesson3: "the cat sat on the mat. the dog ran fast.\ntap the keys with care. feel the rhythm flow. tap the keys with care. feel the rhythm flow. take your time and breathe. let your fingers go. the sun is up and the sky is blue. the kids run fast in the green park.",
+  
+  // Level Amateur
+  amateurLesson1: "qwerty qwerty qwerty qwerty qwerty qwerty\nqwe rty wer tyq wer tyq wer tyq qwerty qwerty\nqwe rty wer tyq wer tyq wer tyq qwerty qwerty\nqwe rty wer tyq wer tyq wer",
+  amateurLesson2: "run sun fun bun. top hop pop stop.\nwe go to the park. you can type fast. run sun fun bun. top hop pop stop. we go to the park. you can type fast. the sun sets slowly over the horizon, casting long shadows across the land.",
+  amateurLesson3: "Hello, world! Time to code.\nDon't forget: Shift, Alt, and Ctrl are useful keys. As you start typing, remember to keep your fingers steady and your mind focused. Practice makes perfect, and the more you type, the faster and more accurate you become.",
+
+  // Level Professional
+  professionalLesson1: "Speed comes with time, not haste.\nPrecision is the mark of a master.",
+  professionalLesson2: "The quick brown fox jumps over the lazy dog.\nTyping becomes easier the more you practice.",
+  professionalLesson3: "Price: $5.99 - Discount: 15% off!\nCall us now @ 555-1234 or visit www.example.com.",
+
+  // Top level Jeje's Master
+  jejeMasterLesson1: "Ready, set, go! Type like the wind.\nNo pauses. No breaks. Only speed and focus.",
+  jejeMasterLesson2: "Perfection is not an act, but a habit.\nKeep your fingers steady. Zero errors allowed.",
+  jejeMasterLesson3: "Once upon a time, in a world of code, a typist emerged.\nWrite your own path. Tell your own story. Type freely and fearlessly.",
+};

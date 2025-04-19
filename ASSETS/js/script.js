@@ -7,6 +7,7 @@ export const inputField = document.getElementById("input-field");
 const languageSelect = document.getElementById("languageSelect");
 const message = document.getElementsByClassName("message")[0];
 import { wordsEng, wordsFr, wordsMlg } from "./word.js";
+
 let blured = false;
 
 const applyBlur = () => {
