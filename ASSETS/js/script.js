@@ -4,8 +4,8 @@
 export const modeSelect = document.getElementById("mode");
 export const wordDisplay = document.getElementById("word-display");
 export const inputField = document.getElementById("input-field");
-
-import { words } from "../js/word.js";
+const languageSelect = document.getElementById("languageSelect");
+import { wordsEng, wordsFr, wordsMlg } from "../js/word.js";
 
 let startTime = null,
     previousEndTime = null;
@@ -20,7 +20,14 @@ const accuracyResult = document.getElementById("accuracy-result");
 const next = document.getElementById("mybtn");
 // Générer un mot aléatoire
 const getRandomWord = (mode) => {
-    const wordList = words[mode];
+    let wordList = [];
+    if (languageSelect.value === "FR") {
+        wordList = wordsFr[mode];
+    } else if (languageSelect.value === "ENG") {
+        wordList = wordsEng[mode];
+    } else if (languageSelect.value === "MLG") {
+        wordList = wordsMlg[mode];
+    }
     return wordList[Math.floor(Math.random() * wordList.length)];
 };
 
@@ -195,6 +202,7 @@ inputField.addEventListener("input", () => {
 
 inputField.addEventListener("keydown", updateWord);
 modeSelect.addEventListener("change", () => {
+    localStorage.setItem("preferredMode", modeSelect.value);
     startTest();
     inputField.focus();
 });
@@ -206,14 +214,29 @@ next.addEventListener("click", () => {
 });
 
 const dash = document.getElementById("todashboard");
- dash.addEventListener("click", () => {
-     window.location.href = "dashboard.html";
- });
-
-
+dash.addEventListener("click", () => {
+    window.location.href = "dashboard.html";
+});
 
 const logout = document.querySelector(".logout");
 logout.addEventListener("click", () => {
     window.location.href = "../../index.html";
 });
-startTest();
+
+languageSelect.addEventListener("change", () => {
+    localStorage.setItem("preferredLanguage", languageSelect.value);
+    startTest();
+});
+
+window.addEventListener("DOMContentLoaded", () => {
+    const savedLanguage = localStorage.getItem("preferredLanguage");
+    const savedMode = localStorage.getItem("preferredMode");
+
+    if (savedLanguage) {
+        languageSelect.value = savedLanguage;
+    }
+    if (savedMode) {
+        modeSelect.value = savedMode;
+    }
+    startTest();
+});
