@@ -5,6 +5,22 @@ export const modeSelect = document.getElementById("mode");
 export const wordDisplay = document.getElementById("word-display");
 export const inputField = document.getElementById("input-field");
 const languageSelect = document.getElementById("languageSelect");
+const message = document.getElementsByClassName("message")[0];
+let blured = false;
+
+const applyBlur = () => {
+    wordDisplay.classList.add("blur-md");
+    blured = true;
+    message.classList.add("bg-red-500");
+    message.classList.remove("opacity-0");
+};
+const removeBlur = () => {
+    wordDisplay.classList.remove("blur-md");
+    blured = false;
+    message.classList.remove("bg-red-500");
+    message.classList.add("opacity-0");
+    inputField.focus();
+};
 import { wordsEng, wordsFr, wordsMlg } from "../js/word.js";
 
 let startTime = null,
@@ -33,7 +49,6 @@ const getRandomWord = (mode) => {
 
 // Initialiser le test
 export const startTest = (wordCount = 105) => {
-    inputField.focus();
     wordsToType.length = 0;
     wordDisplay.innerHTML = "";
     currentWordIndex = 0;
@@ -65,6 +80,7 @@ export const startTest = (wordCount = 105) => {
     wpmResult.textContent = "0";
     accuracyResult.textContent = "0%";
     highlightNextWord();
+    inputField.focus();
 };
 
 // Coloration des lettres en temps réel
@@ -225,6 +241,7 @@ logout.addEventListener("click", () => {
 
 languageSelect.addEventListener("change", () => {
     localStorage.setItem("preferredLanguage", languageSelect.value);
+    applyBlur();
     startTest();
 });
 

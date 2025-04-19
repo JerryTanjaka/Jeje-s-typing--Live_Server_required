@@ -1,10 +1,11 @@
 import { inputField, modeSelect, startTest, wordDisplay } from "../js/script.js";
 
+ const message = document.getElementsByClassName("message")[0];
+
 const timeCool = (() => {
     const mybtn = document.getElementById("mybtn");
     const timezone = document.getElementById("timezone");
     const timeSelect = document.getElementById("time-select");
-    const message = document.getElementsByClassName("message")[0];
 
     let interval;
     let secondes = 0;
@@ -12,19 +13,19 @@ const timeCool = (() => {
     let timerStarted = false;
     let blured = false;
 
-    const applyBlur = () => {
+    
+     const applyBlur = () => {
         wordDisplay.classList.add("blur-md");
         blured = true;
         message.classList.add("bg-red-500");
         message.classList.remove("opacity-0");
     };
-
     const removeBlur = () => {
         wordDisplay.classList.remove("blur-md");
         blured = false;
         message.classList.remove("bg-red-500");
         message.classList.add("opacity-0");
-        inputField.focus(); // 👉 maintenant ici
+        inputField.focus();
     };
 
     const handleSelectClick = () => {
@@ -52,7 +53,7 @@ const timeCool = (() => {
     document.addEventListener("keydown", (e) => {
         if (blured && (e.key === "Enter" || e.key === " ")) {
             startTest();
-            removeBlur(); // 👉 supprime le blur et fait le focus
+            removeBlur(); 
         }
     });
 
