@@ -44,33 +44,33 @@
                 </ul>
             </nav>
             <main class="flex min-h-screen w-screen flex-col items-center bg-[var(--secondary-color)] bg-cover bg-center">
-                <div class="flex h-fit self-start rounded-full px-2.5">
+                <div class="flex tittle h-fit self-start rounded-full px-2.5">
                     <div class="ml-5 w-14">
                         <img src="../Photos/logo/dark.png" alt="" />
                     </div>
-                    <h2 class="flex items-center space-x-4 text-2xl font-semibold tracking-tight">
-                        <span class="text-white"
+                    <h2 class="flex ml-5 mt-2 space-x-5 items-center mb-12  text-3xl font-semibold tracking-tight">
+                        <span
                             >JE<span class="text-emerald-400">JE'<span class="text-white">S</span></span></span
                         >
                         <span class="text-emerald-400">TYPING</span>
                     </h2>
                 </div>
-                <div class="flex min-h-[90vh] w-full max-w-4xl flex-col items-center text-center">
+                <div class="flex min-h-[90vh] w-full max-w-4xl flex-col  items-center text-center ">
                     <div class="mb-2 flex w-full items-center justify-between">
-                        <div class="flex items-center gap-4 bg-[var(--primary-color)] ">
-                            <label for="mode" class="font-digital text-2xl font-medium tracking-widest text-white uppercase">difficulty:</label>
-                            <select id="mode" class="block w-full rounded-lg border-2 p-2 text-xl focus:border-blue-500 focus:ring-blue-500 bg-[var(--secondary-color)] text-white">
-                                <option value="easy"><p class="border-8 text-red-900">😁 Easy</p></option>
-                                <option value="medium">😐 Medium</option>
-                                <option value="hard">😡 Hard</option>
+                        <div class="  flex items-center gap-4 bg-[var(--primary-color)] rounded-2xl ">
+                            <label for="mode" class="font-digital text-2xl font-medium tracking-widest text-white uppercase pl-4 py-4">difficulty:</label>
+                            <select id="mode" class="block w-full rounded-lg bg-[var(--secondary-color)] border-2 p-2 text-xl focus:border-blue-500 focus:ring-blue-500">
+                                <option value="easy"><p class="border-8 text-red-900"> Easy</p></option>
+                                <option value="medium"> Medium</option>
+                                <option value="hard"> Hard</option>
                             </select>
                         </div>
-                        <div class="flex items-center gap-4 bg-[var(--primary-color)] ">
+                        <div class=" flex items-center gap-4  bg-[var(--primary-color)] rounded-2xl pl-10 py-1.5">
                             <label for="time-select" class="font-digital text-2xl font-medium tracking-widest text-white uppercase">time:</label>
-                            <select id="time-select" class="block w-full rounded-lg border-2 p-2 text-xl focus:border-blue-500 focus:ring-blue-500 bg-[var(--secondary-color)] text-white">
-                                <option value="15">⏱️ 15 s</option>
-                                <option value="30">⏱️ 30 s</option>
-                                <option value="60">⏱️ 60 s</option>
+                            <select id="time-select" class="block w-full bg-[var(--secondary-color)] rounded-lg border-2 p-2 text-xl focus:border-blue-500 focus:ring-blue-500">
+                                <option value="15"> 15 s</option>
+                                <option value="30"> 30 s</option>
+                                <option value="60"> 60 s</option>
                                 <option value="infinite">♾️</option>
                             </select>
                         </div>
@@ -83,7 +83,7 @@
                             <button id="mybtn" class="font-digital mx-auto w-fit rounded-lg bg-emerald-600 px-4 py-2 text-2xl tracking-widest text-white ring-emerald-600 duration-100 hover:scale-105 hover:bg-emerald-700 focus:ring-2 focus:ring-offset-2 focus:outline-none active:scale-95" tabindex="0">NEXT></button>
                         </div>
                     </div>
-                    <div class="grid max-h-[150px] w-full min-w-[60vw] grid-cols-3 rounded-2xl border-2 border-emerald-400 bg-[var(--secondary-color)] p-2 ring-1"id="realbg">
+                    <div class="grid  bg-red-500 max-h-[150px] w-full min-w-[60vw] grid-cols-3 rounded-2xl border-2 border-emerald-400  p-2 ring-1" id="realbg">
                         <div class="flex w-56 flex-col items-center">
                             <img class="max-w-[50px] self-center" src="../Photos/abc-svgrepo-com.png" alt="" />
                             <p id="wpm-result" class="mt-2 text-3xl text-white"></p>
@@ -99,7 +99,6 @@
                             <p id="wpm-result" class="mt-2 text-xl text-white">Accuracy</p>
                         </div>
                     </div>
-                    <input autocomplete="off" id="input-field" type="text" class="absolute top-0 right-0 w-20 rounded-xl border-none bg-neutral-700 px-4 py-3 text-lg text-white opacity-0 focus:ring-2 focus:ring-white/50 focus:outline-none" placeholder="Start typing here..." autofocus />
                     <div class="relative mt-4 line-clamp-6 flex h-[270px] w-[88vw] flex-col items-center overflow-y-hidden scroll-smooth rounded-2xl text-[var(--tiers-color)] bg-[var(--primary-color)] p-8 text-3xl leading-relaxed break-words shadow-lg shadow-black/40 select-none">
                         <input autocomplete="off" id="input-field" type="text" class="absolute top-0 right-0 w-20 rounded-xl border-none bg-neutral-700 px-4 py-3 text-lg opacity-0 focus:ring-2 focus:ring-white/50 focus:outline-none" placeholder="Start typing here..." autofocus />
                         <div class="message absolute top-20 z-50 flex w-4xl justify-center rounded-3xl px-16 py-3 opacity-0">Appuyer sur<span class="px-4 font-extrabold uppercase underline">entrer</span> pour commencer</div>
@@ -161,7 +160,7 @@
                                 <div class="flex gap-2">
                                     <div class="key flex h-10 w-10 items-center justify-center rounded-md bg-slate-700 text-sm text-white opacity-20 shadow-md"></div>
                                     <div class="key flex h-10 w-12 items-center justify-center rounded-md bg-slate-700 text-sm text-white opacity-20 shadow-md"></div>
-                                    <div class="key flex h-10 w-12 items-center justifyxt-nter rounded-md bg-slate-700 text-sm text-white opacity-20 shadow-md"></div>
+                                    <div class="key flex h-10 w-12 items-center justify-center rounded-md bg-slate-700 text-sm text-white opacity-20 shadow-md"></div>
                                     <div class="key flex h-10 w-12 items-center justify-center rounded-md bg-slate-700 text-sm text-white opacity-20 shadow-md"></div>
                                     <div class="key flex h-10 w-64 items-center justify-center rounded-md bg-slate-700 text-white shadow-md"><!-- sss--><!--s --></div>
                                     <div class="key flex h-10 w-12 items-center justify-center rounded-md bg-slate-700 text-sm text-white opacity-20 shadow-md"></div>
@@ -291,7 +290,7 @@
                         </div>
                         <div class="flex items-center justify-between">
                             <label for="languageSelect" class="text-2xl font-medium tracking-widest text-white uppercase">Language</label>
-                            <select id="languageSelect" class="block w-4xl rounded-lg border-2 p-2 text-xl focus:border-blue-500 focus:ring-blue-500  bg-zinc-600">
+                            <select id="languageSelect" class="block w-4xl rounded-lg border-2 p-2 text-xl focus:border-blue-500 focus:ring-blue-500">
                                 <option value="FR">🇫🇷 Français</option>
                                 <option value="ENG">🇺🇸 Anglais</option>
                                 <option value="MLG">🇲🇬 Malagasy</option>

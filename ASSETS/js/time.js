@@ -62,6 +62,7 @@ const timeCool = (() => {
     const stopTimer = () => {
         clearInterval(interval);
         timerStarted = false;
+
     };
 
     const decompte = () => {
@@ -71,6 +72,8 @@ const timeCool = (() => {
                 timezone.textContent = secondes;
             } else {
                 stopTimer();
+                applyBlur();
+
                 timezone.textContent = "⌛ Temps écoulé !";
                 timezone.classList.add("text-red-700", "font-bold", "animate-pulse", "text-[2.4rem]", "uppercase");
                 const inputField = document.getElementById("input-field");
