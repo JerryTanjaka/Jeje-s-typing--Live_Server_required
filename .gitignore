@@ -6,3 +6,5 @@ variable.js
 output.css
 .DS_Store
 .prettierrc
+back.html
+tailwind.config.js
