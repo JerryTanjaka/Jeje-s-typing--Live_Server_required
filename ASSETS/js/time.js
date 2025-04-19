@@ -1,42 +1,111 @@
-(() => {
-   const mybtn = document.getElementById("mybtn");
-   const timezone = document.getElementById("timezone");
-   let interval;
-   let secondes = 0;
-   let timerStarted = false;
+import { inputField, modeSelect, startTest, wordDisplay } from "./script.js";
 
-   const start = () => {
-      interval = setInterval(decompte, 1000);
-      timerStarted = true;
-   };
+export const message = document.getElementsByClassName("message")[0];
 
-   const stop = () => {
-      clearInterval(interval);
-      timerStarted = false;
-   };
+const timeCool = (() => {
+    const mybtn = document.getElementById("mybtn");
+    const timezone = document.getElementById("timezone");
+    const timeSelect = document.getElementById("time-select");
 
-   const decompte = () => {
-      secondes++;
-      if (secondes > 60) {
-         stop();
-      } else {
-         timezone.textContent = secondes;
-      }
-   };
+    let interval;
+    let secondes = 0;
+    let isInfinite = false;
+    let timerStarted = false;
+    let blured = false;
 
-   const launch = () => {
-      stop();
-      secondes = 0;
-      timezone.textContent = secondes;
-      start();
-      mybtn.textContent = "Restart";
-   };
+    const applyBlur = () => {
+        wordDisplay.classList.add("blur-md");
+        blured = true;
+        message.classList.add("bg-sky-700");
+        message.classList.remove("opacity-0");
+    };
+    const removeBlur = () => {
+        wordDisplay.classList.remove("blur-md");
+        blured = false;
+        message.classList.remove("bg-sky-700");
+        message.classList.add("opacity-0");
+        inputField.focus();
+    };
 
-   mybtn.addEventListener("click", () => {
-      launch();
-   });
+    const handleSelectClick = () => {
+        stopTimer();
+        applyBlur();
+    };
 
-   document.addEventListener("keydown", () => {
-      if (!timerStarted) launch();
-   });
+    timeSelect.addEventListener("click", handleSelectClick);
+    modeSelect.addEventListener("click", handleSelectClick);
+
+    const handleSelectChange = () => {
+        stopTimer();
+        applyBlur();
+        isInfinite = timeSelect.value === "infinite";
+        secondes = isInfinite ? 0 : parseInt(timeSelect.value);
+        timezone.textContent = isInfinite ? "∞" : secondes;
+    };
+
+    timeSelect.addEventListener("change", handleSelectChange);
+    modeSelect.addEventListener("change", handleSelectChange);
+
+    document.addEventListener("keydown", (e) => {
+        if (blured && (e.key === "Enter")) {
+            removeBlur();
+            startTest();
+        }
+    });
+
+    const start = () => {
+        interval = setInterval(decompte, 1000);
+        timezone.classList.remove("text-red-700", "font-bold", "animate-pulse", "text-[2.4rem]");
+        timerStarted = true;
+    };
+
+    const stopTimer = () => {
+        clearInterval(interval);
+        timerStarted = false;
+
+    };
+
+    const decompte = () => {
+        if (!isInfinite) {
+            if (secondes > 0) {
+                secondes--;
+                timezone.textContent = secondes;
+            } else {
+                stopTimer();
+                applyBlur();
+
+                timezone.textContent = "⌛ Temps écoulé !";
+                timezone.classList.add("text-red-700", "font-bold", "animate-pulse", "text-[2.4rem]", "uppercase");
+                const inputField = document.getElementById("input-field");
+                if (inputField) {
+                    inputField.disabled = true;
+                    inputField.value = "Temps écoulé !";
+                }
+            }
+        }
+    };
+
+    const launch = () => {
+        stopTimer();
+        isInfinite = timeSelect.value === "infinite";
+        secondes = isInfinite ? 0 : parseInt(timeSelect.value);
+        timezone.textContent = isInfinite ? "∞" : secondes;
+
+        const inputField = document.getElementById("input-field");
+        if (inputField) {
+            inputField.disabled = false;
+            inputField.value = "";
+        }
+
+        start();
+        mybtn.textContent = "Next>";
+    };
+
+    mybtn.addEventListener("click", () => {
+        launch();
+    });
+
+    document.addEventListener("keydown", () => {
+        if (!timerStarted) launch();
+    });
 })();

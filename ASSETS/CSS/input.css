@@ -1,19 +1,66 @@
-/*stylesheet fot typing game*/
 @import "tailwindcss";
 
 :root {
     --primary-color: #1c293a;
     --secondary-color: #23354d;
-    --green: #34D399;
-    --orange: #ff9800;
-    --purple: #9c27b0;
-    --red: #f87171
+    --tiers-color: white;
+}
+/* :root {
+    --primary-color: #1e2a3a;
+    --secondary-color: #253344;
+}  */
+.default {
+    --tiers-color: white;
+    --primary-color: #1c293a;
+    --secondary-color: #23354d;
+}
+.light {
+    --secondary-color: #1a5570;
+    --primary-color: #28292a;
+    --tiers-color: black;
+}
+
+.dark {
+    --primary-color: #0f172a;
+    --secondary-color: #1e293b;
+    --tiers-color: white;
+}
+
+.emerald {
+    --primary-color: #064e3b;
+    --secondary-color: #10b981;
+    --tiers-color: white;
+}
+
+
+.ocean {
+    --secondary-color: #0077b6;
+    --primary-color: #629199;
+    --tiers-color: white;
+}
+
+.charcoal {
+    --seconadry-color: #2b2d42;
+    --primary-color: #454a53;
+    --tiers-color: white;
+}
+
+.ice {
+    --primary-color: #d8f3dc;
+    --secondary-color: #52b788;
+    --tiers-color: white;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 * {
     font-family: monospace;
     margin: 0;
     padding: 0;
+    font: weight 1px !important;
     box-sizing: border-box;
 }
 
@@ -30,9 +77,9 @@
 .font-digital {
     font-family: "digital";
 }
-
-/* ajout */
-/* animation personnalisée */
+.tittle{
+    font-family: monospace !important;
+}
 @keyframes storyset {
     0% {
         transform: translateY(50px);
@@ -46,8 +93,6 @@
 .animate-storyset {
     animation: storyset 3s infinite alternate;
 }
-
-/*début*/
 .body {
     margin: 0;
     padding: 0;
@@ -191,9 +236,8 @@
 }
 
 .icon-nav:hover {
-    color: #00FFFF;
-    transform: scale(1.15);
-    transition: all 0.2s ease-in-out;
+    color:#00FFFF;
+    transform: scale(1.1);
 }
 
 .icon-nav-off:hover {
@@ -411,4 +455,7 @@ h2 {
     font-size: 2.3rem;
     color: white;
     cursor: pointer;
+}
+#realbg{
+    background-color: var(--primary-color) !important;
 }
