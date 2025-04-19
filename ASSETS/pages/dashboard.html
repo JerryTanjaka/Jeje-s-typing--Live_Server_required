@@ -9,24 +9,28 @@
         <link rel="stylesheet" href="../../output.css" />
         <script src="../js/redirection.js" defer></script>
         <link rel="stylesheet" href="../CSS/input.css" />
+        <script src="../js/redirection.js"defer></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     </head>
     <body class="flex">
-        <nav class="h-screen w-20 bg-[var(--secondary-color)]">
+        <nav class="h-screen min-w-[80px]  max-w-[80px] bg-[var(--secondary-color)]">
             <ul class="flex h-full flex-col items-center gap-10 py-8">
                 <li class="cursor-pointer" id="todashboard">
                     <i class="fa-solid fa-graduation-cap icon-nav text-3xl"></i>
                 </li>
-                <li class="cursor-pointer">
-                    <i class="fa-solid fa-font icon-nav text-3xl"></i>
+                <li class=" cursor-pointer"id="typing">
+                    <i class="fa-solid fa-font icon-nav  text-3xl"></i>
                 </li>
                 <li class="cursor-pointer">
                     <i class="fa-solid fa-clipboard-list icon-nav text-3xl"></i>
                 </li>
-                <li class="mt-auto cursor-pointer">
-                    <i class="fa-solid fa-gear icon-nav-settings text-3xl"></i>
+                <li class="mt-auto cursor-pointer "id="info">
+                    <i class="fa-solid fa-circle-info icon-nav  text-3xl"></i>
                 </li>
-                <li class="cursor-pointer">
+                <li class="settingsSelector  cursor-pointer">
+                    <i class="fa-solid fa-gear text-3xl icon-nav-settings"></i>
+                </li>
+                <li class="logout cursor-pointer">
                     <i class="fa-solid fa-power-off icon-nav-off text-3xl"></i>
                 </li>
             </ul>
