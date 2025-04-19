@@ -6,23 +6,22 @@ export const wordDisplay = document.getElementById("word-display");
 export const inputField = document.getElementById("input-field");
 const languageSelect = document.getElementById("languageSelect");
 const message = document.getElementsByClassName("message")[0];
+import { wordsEng, wordsFr, wordsMlg } from "./word.js";
 let blured = false;
 
 const applyBlur = () => {
-    wordDisplay.classList.add("blur-md");
-    blured = true;
-    message.classList.add("bg-red-500");
-    message.classList.remove("opacity-0");
-};
-const removeBlur = () => {
-    wordDisplay.classList.remove("blur-md");
-    blured = false;
-    message.classList.remove("bg-red-500");
-    message.classList.add("opacity-0");
-    inputField.focus();
-};
-import { wordsEng, wordsFr, wordsMlg } from "../js/word.js";
-
+        wordDisplay.classList.add("blur-md");
+        blured = true;
+        message.classList.add("bg-red-500");
+        message.classList.remove("opacity-0");
+    };
+    const removeBlur = () => {
+        wordDisplay.classList.remove("blur-md");
+        blured = false;
+        message.classList.remove("bg-red-500");
+        message.classList.add("opacity-0");
+        inputField.focus();
+    };
 let startTime = null,
     previousEndTime = null;
 let currentWordIndex = 0;
@@ -81,6 +80,7 @@ export const startTest = (wordCount = 105) => {
     accuracyResult.textContent = "0%";
     highlightNextWord();
     inputField.focus();
+
 };
 
 // Coloration des lettres en temps réel
@@ -143,6 +143,8 @@ const getCurrentStats = () => {
             }
         };
         document.addEventListener("keydown", handleEnter);
+        inputField.focus();
+
     }
 
     const wordChars = Math.max(typedWord.length, targetWord.length);
@@ -241,8 +243,8 @@ logout.addEventListener("click", () => {
 
 languageSelect.addEventListener("change", () => {
     localStorage.setItem("preferredLanguage", languageSelect.value);
-    applyBlur();
     startTest();
+    applyBlur();
 });
 
 window.addEventListener("DOMContentLoaded", () => {
@@ -256,4 +258,30 @@ window.addEventListener("DOMContentLoaded", () => {
         modeSelect.value = savedMode;
     }
     startTest();
+});
+document.addEventListener("keydown", (e) => {
+    if (blured && (e.key === "Enter" || e.key === " ")) {
+        startTest();
+        removeBlur();
+    }
+});
+// theme
+function applyThemeFromLocalStorage() {
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+        document.documentElement.className = savedTheme;
+    }
+}             
+window.onload = applyThemeFromLocalStorage;const buttons = document.querySelectorAll(".theme-btn");
+
+buttons.forEach((button) => {
+    button.addEventListener("click", (event) => {
+        const theme = event.target.id;
+        document.documentElement.className = theme;
+        localStorage.setItem("theme", theme);
+
+        localStorage.setItem("preferredLanguage", languageSelect.value);
+        startTest();
+        applyBlur();
+    });
 });

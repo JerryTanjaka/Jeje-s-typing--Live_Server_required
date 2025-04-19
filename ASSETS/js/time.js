@@ -1,6 +1,6 @@
-import { inputField, modeSelect, startTest, wordDisplay } from "../js/script.js";
+import { inputField, modeSelect, startTest, wordDisplay } from "./script.js";
 
- const message = document.getElementsByClassName("message")[0];
+export const message = document.getElementsByClassName("message")[0];
 
 const timeCool = (() => {
     const mybtn = document.getElementById("mybtn");
@@ -13,8 +13,7 @@ const timeCool = (() => {
     let timerStarted = false;
     let blured = false;
 
-    
-     const applyBlur = () => {
+    const applyBlur = () => {
         wordDisplay.classList.add("blur-md");
         blured = true;
         message.classList.add("bg-red-500");
@@ -38,10 +37,7 @@ const timeCool = (() => {
 
     const handleSelectChange = () => {
         stopTimer();
-
-        // Appliquer le flou, mais ne pas encore focus
         applyBlur();
-
         isInfinite = timeSelect.value === "infinite";
         secondes = isInfinite ? 0 : parseInt(timeSelect.value);
         timezone.textContent = isInfinite ? "∞" : secondes;
@@ -53,7 +49,7 @@ const timeCool = (() => {
     document.addEventListener("keydown", (e) => {
         if (blured && (e.key === "Enter" || e.key === " ")) {
             startTest();
-            removeBlur(); 
+            removeBlur();
         }
     });
 

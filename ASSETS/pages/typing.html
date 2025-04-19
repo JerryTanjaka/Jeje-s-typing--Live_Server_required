@@ -18,6 +18,7 @@
         <script src="../js/song.js" defer></script>
         <script src="../js/theme.js" defer></script>
         <script src="../js/settings.js" defer></script>
+        <script src="../js/time.js" defer></script>
     </head>
     <body class="max-h-screen max-w-screen overflow-hidden text-[var(--tiers-color)]">
         <div class="parent flex max-w-screen">
@@ -76,7 +77,6 @@
                                 <i class="fa-regular fa-eye-slash"></i>
                             </button>
                         </div>
-
                         <div class="flex h-fit items-center justify-center text-sm text-neutral-400">
                             <button id="mybtn" class="font-digital mx-auto w-fit rounded-lg bg-emerald-600 px-4 py-2 text-2xl tracking-widest text-white ring-emerald-600 duration-100 hover:scale-105 hover:bg-emerald-700 focus:ring-2 focus:ring-offset-2 focus:outline-none active:scale-95" tabindex="0">NEXT></button>
                         </div>
@@ -97,10 +97,10 @@
                             <p id="wpm-result" class="mt-2 text-xl text-white">Accuracy</p>
                         </div>
                     </div>
+                    <input autocomplete="off" id="input-field" type="text" class="absolute top-0 right-0 w-20 rounded-xl border-none bg-neutral-700 px-4 py-3 text-lg text-white opacity-0 focus:ring-2 focus:ring-white/50 focus:outline-none" placeholder="Start typing here..." autofocus />
                     <div class="relative mt-4 line-clamp-6 h-[270px] w-[88vw] overflow-y-hidden scroll-smooth rounded-2xl bg-[var(--secondary-color)] p-8 text-3xl leading-relaxed break-words shadow-lg shadow-black/40 select-none">
                         <div class="message absolute top-20 z-50 flex w-full justify-center opacity-0">Appuyer sur entrer ou espace pour commencer</div>
                         <div id="word-display" class="h-fit max-h-[170px] text-3xl leading-relaxed break-words text-[var(--tiers-color)] select-none"></div>
-                        <input autocomplete="off" id="input-field" type="text" class="absolute top-0 right-0 w-20 rounded-xl border-none bg-neutral-700 px-4 py-3 text-lg text-white opacity-0 focus:ring-2 focus:ring-white/50 focus:outline-none" placeholder="Start typing here..." autofocus />
                     </div>
                     <div class="flex items-center justify-center p-4">
                         <div class="keyboard w-full max-w-4xl rounded-xl border border-slate-600 bg-slate-800 p-4 opacity-0 shadow-lg">
@@ -210,7 +210,6 @@
                                 </div>
                                 <button id="light" class="theme-btn rounded-md bg-gray-100 px-4 py-1 text-sm text-black hover:bg-gray-200 focus:ring-2 focus:ring-gray-300 focus:outline-none">Light</button>
                             </div>
-
                             <div class="theme-choice space-y-4 text-center" data-theme="dark">
                                 <div class="flex h-20 w-28 flex-col justify-between rounded-md bg-[#0f172a] p-2 shadow-md">
                                     <div class="flex space-x-1">
@@ -227,7 +226,6 @@
                                 </div>
                                 <button id="dark" class="theme-btn rounded-md bg-gray-800 px-4 py-1 text-sm text-white hover:bg-gray-700 focus:ring-2 focus:ring-gray-600 focus:outline-none">Dark</button>
                             </div>
-
                             <div class="theme-choice space-y-4 text-center" data-theme="emerald">
                                 <div class="flex h-20 w-28 flex-col justify-between rounded-md bg-[#064e3b] p-2 shadow-md">
                                     <div class="flex space-x-1">
@@ -244,7 +242,6 @@
                                 </div>
                                 <button id="emerald" class="theme-btn rounded-md bg-teal-600 px-4 py-1 text-sm text-white hover:bg-teal-700 focus:ring-2 focus:ring-teal-500 focus:outline-none">Emerald</button>
                             </div>
-
                             <!-- Ocean -->
                             <div class="theme-choice space-y-4 text-center" data-theme="ocean">
                                 <div class="flex h-20 w-28 flex-col justify-between rounded-md bg-[#0077b6] p-2 shadow-md">
